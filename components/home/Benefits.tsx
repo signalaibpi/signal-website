@@ -1,4 +1,5 @@
 import { SectionEyebrow } from "./SectionEyebrow";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const BENEFITS = [
   {
@@ -28,6 +29,10 @@ export function Benefits() {
             The Business AI Diagnostic informs AI strategy planning, pilots and roll-outs.
           </p>
         </div>
+        <ImagePlaceholder
+          label="leaders and frontline teams reviewing AI priorities together"
+          aspect="aspect-[21/9]"
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {BENEFITS.map((benefit) => (
             <div
