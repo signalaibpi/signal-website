@@ -1,5 +1,3 @@
-import { ArrowRightIcon } from "@/lib/icons";
-
 type Area = "Strategy" | "Implementation" | "Operation" | "Governance";
 
 const AREA_STYLES: Record<Area, { tint: string; text: string }> = {
@@ -98,15 +96,6 @@ export function Hero() {
                     </div>
                   );
                 })}
-              </div>
-              <div className="pt-5 flex justify-end">
-                <a
-                  className="inline-flex items-center gap-1.5 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors"
-                  href="#"
-                >
-                  <span>View a sample diagnostic</span>
-                  <ArrowRightIcon className="w-4 h-4" />
-                </a>
               </div>
             </div>
           </div>
