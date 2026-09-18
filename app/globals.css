@@ -18,17 +18,13 @@
      (Strategy, Implementation, Operation, Governance). Shared with the
      future Diagnostic page's radial chart — see
      Website/Business AI Diagnostic page/Visual ideas.md. Strategy reuses
-     the brand primary since it's already blue; the other three are new.
-     Deliberately avoids green/amber/yellow — those are reserved by the
-     diagnostic's own RAG status system (see Signal Business AI
-     Diagnostic.md → Output), so using them here would collide with that
-     meaning elsewhere in real diagnostic output. */
+     the brand primary since it's already blue; the other three are new. */
   --color-area-strategy: #2457d6;
   --color-area-strategy-tint: #eaf1fd;
-  --color-area-implementation: #3e6478;
-  --color-area-implementation-tint: #e8eff2;
-  --color-area-operation: #bd4b72;
-  --color-area-operation-tint: #fbeaf0;
+  --color-area-implementation: #1f8a70;
+  --color-area-implementation-tint: #e6f5f1;
+  --color-area-operation: #b5790a;
+  --color-area-operation-tint: #fdf3e3;
   --color-area-governance: #6d51c9;
   --color-area-governance-tint: #f1eefb;
 
