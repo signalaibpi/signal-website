@@ -20,13 +20,13 @@
      Website/Business AI Diagnostic page/Visual ideas.md. Strategy reuses
      the brand primary since it's already blue; the other three are new. */
   --color-area-strategy: #2457d6;
-  --color-area-strategy-tint: #eaf1fd;
-  --color-area-implementation: #1f8a70;
-  --color-area-implementation-tint: #e6f5f1;
-  --color-area-operation: #b5790a;
-  --color-area-operation-tint: #fdf3e3;
+  --color-area-strategy-tint: #dfe8f8;
+  --color-area-implementation: #145a7d;
+  --color-area-implementation-tint: #e1eff6;
+  --color-area-operation: #3e4759;
+  --color-area-operation-tint: #eceef2;
   --color-area-governance: #6d51c9;
-  --color-area-governance-tint: #f1eefb;
+  --color-area-governance-tint: #eae4f5;
 
   --font-display: var(--font-plus-jakarta-sans);
   --font-body: var(--font-inter);
