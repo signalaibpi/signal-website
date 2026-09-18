@@ -1,21 +1,19 @@
 import { ArrowRightIcon } from "@/lib/icons";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
-const SAMPLE_DIMENSIONS = [
-  { name: "01. AI Strategy", weight: 4, score: "68%", priority: false },
-  {
-    name: "03. Workforce AI Willingness",
-    weight: 4,
-    score: "34%",
-    priority: true,
-  },
-  { name: "06. Data Quality", weight: 4, score: "82%", priority: false },
-  {
-    name: "10. Human Accountability",
-    weight: 4,
-    score: "41%",
-    priority: true,
-  },
+const DIMENSIONS = [
+  { number: "01", name: "AI Strategy" },
+  { number: "02", name: "Workforce AI Capability" },
+  { number: "03", name: "Workforce AI Willingness" },
+  { number: "04", name: "Work Redesign" },
+  { number: "05", name: "Output Quality Assurance" },
+  { number: "06", name: "Data Quality" },
+  { number: "07", name: "Data & Process Integration" },
+  { number: "08", name: "Iteration Velocity" },
+  { number: "09", name: "Quality at the Right Cost" },
+  { number: "10", name: "Human Accountability" },
+  { number: "11", name: "Policy and Control Assurance" },
+  { number: "12", name: "Risk Management" },
 ];
 
 export function Hero() {
@@ -70,45 +68,25 @@ export function Hero() {
                   </span>
                 </div>
                 <span className="font-body text-xs px-2 py-0.5 rounded bg-surface-container text-secondary uppercase font-semibold">
-                  Illustrative sample
+                  12 dimensions
                 </span>
               </div>
-              <div className="flex flex-col gap-3 pt-3">
-                {SAMPLE_DIMENSIONS.map((dim) => (
+              <div className="grid grid-cols-3 gap-2.5 pt-4">
+                {DIMENSIONS.map((dim) => (
                   <div
-                    key={dim.name}
-                    className={`p-3 rounded-lg flex flex-col gap-1.5 ${
-                      dim.priority
-                        ? "bg-primary-tint border border-primary/20"
-                        : "bg-surface-container-low"
-                    }`}
+                    key={dim.number}
+                    className="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1"
                   >
-                    <div className="flex items-center justify-between">
-                      <span className="font-body text-sm font-semibold text-on-surface">
-                        {dim.name}
-                      </span>
-                      <span
-                        className={`font-body text-sm font-semibold ${
-                          dim.priority ? "text-primary" : "text-on-surface"
-                        }`}
-                      >
-                        {dim.score}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between font-body text-xs">
-                      <span className="text-secondary">
-                        Weight: {dim.weight}
-                      </span>
-                      {dim.priority && (
-                        <span className="px-2 py-0.5 rounded bg-primary text-white uppercase font-bold text-[10px] tracking-wide">
-                          Priority
-                        </span>
-                      )}
-                    </div>
+                    <span className="font-display text-lg font-bold text-on-surface">
+                      {dim.number}
+                    </span>
+                    <span className="font-body text-[11px] leading-tight uppercase tracking-wide text-secondary">
+                      {dim.name}
+                    </span>
                   </div>
                 ))}
               </div>
-              <div className="pt-4 flex justify-end">
+              <div className="pt-5 flex justify-end">
                 <a
                   className="inline-flex items-center gap-1.5 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors"
                   href="#"
