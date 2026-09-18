@@ -1,7 +1,7 @@
 import { Hero } from "@/components/home/Hero";
 import { OurApproach } from "@/components/home/OurApproach";
-import { Benefits } from "@/components/home/Benefits";
 import { Diagnostic } from "@/components/home/Diagnostic";
+import { Benefits } from "@/components/home/Benefits";
 import { OtherServices } from "@/components/home/OtherServices";
 import { WhoIsThisFor } from "@/components/home/WhoIsThisFor";
 import { Founder } from "@/components/home/Founder";
@@ -13,8 +13,8 @@ export default function Home() {
     <>
       <Hero />
       <OurApproach />
-      <Benefits />
       <Diagnostic />
+      <Benefits />
       <OtherServices />
       <WhoIsThisFor />
       <Founder />
