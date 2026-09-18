@@ -45,9 +45,8 @@ export function Hero() {
               Take control of AI progress
             </h1>
             <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant max-w-xl">
-              Signal helps CEOs and COOs identify what is holding AI back,
-              decide what to fix first and set measurable improvement
-              targets.
+              Signal shows CEOs and COOs what’s holding AI back
+              and what to fix first.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <a
