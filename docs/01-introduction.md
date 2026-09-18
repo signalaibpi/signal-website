@@ -24,6 +24,8 @@ Three services, described in full in `/Users/erikdekroon/Documents/Signal/Signal
 - **AI Strategy Planning** — helps Boards identify AI priorities, allocate funding, and set organisation-level targets.
 - **Embedded AI Delivery** — helps organisations adopt the AI strategy and build the data quality, workforce capability, and accountabilities required.
 
+Naming convention (per `Signal Website Copy.md`, applied consistently across every page): always write the product's full name, **Business AI Diagnostic**, when naming it as a proper noun. Don't shorten it to "the Diagnostic" or similar — that shorthand doesn't appear anywhere in the approved copy. Lowercase "diagnostic" is fine only as a generic noun ("a sample diagnostic," "diagnostic dimensions," "diagnostic results").
+
 ### Source material
 Content and design decisions for this site should be checked against, in order of authority for their domain:
 

@@ -5,17 +5,17 @@ const CARDS = [
   {
     icon: SearchIcon,
     title: "Finds what is holding AI back",
-    body: "Collects performance evidence for all AI use cases across all teams and all 12 dimensions.",
+    body: "Collects evidence of AI performance for all AI use cases, all teams and all 12 dimensions.",
   },
   {
     icon: ChecklistIcon,
-    title: "Prioritises improvement areas",
-    body: "Scores all dimensions to identify which ones are holding progress back most.",
+    title: "Suggests priority improvements",
+    body: "Scores along 12 dimensions to identify which ones are holding progress back most.",
   },
   {
     icon: FlagIcon,
-    title: "Sets clear improvement targets",
-    body: "Turns the most important gaps into specific, measurable targets teams can work towards.",
+    title: "Suggests improvement targets",
+    body: "Turns the most important gaps into specific, measurable, 3-month targets teams can work towards.",
   },
 ];
 
@@ -26,7 +26,7 @@ export function Diagnostic() {
         <div className="max-w-3xl flex flex-col gap-4">
           <SectionEyebrow>Business AI Diagnostic</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-            Know where AI progress stands. Decide what to fix next.
+            Know where AI stands. Decide what to fix next. Measure progress.
           </h2>
           <p className="font-body text-xl leading-relaxed text-on-surface-variant">
             The Business AI Diagnostic continuously assesses your use of AI across 12
