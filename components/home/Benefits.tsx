@@ -20,7 +20,7 @@ export function Benefits() {
     <section className="w-full bg-surface py-20 sm:py-24 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex flex-col gap-14">
         <div className="max-w-3xl flex flex-col gap-4">
-          <SectionEyebrow>Where the Diagnostic applies</SectionEyebrow>
+          <SectionEyebrow>When the Diagnostic applies</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
             One diagnostic. Every stage of AI adoption.
           </h2>
