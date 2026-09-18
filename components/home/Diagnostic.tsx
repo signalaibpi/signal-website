@@ -14,8 +14,8 @@ const CARDS = [
   },
   {
     icon: FlagIcon,
-    title: "Suggests improvement targets",
-    body: "Turns the most important gaps into specific, measurable, 3-month targets teams can work towards.",
+    title: "Tracks progress",
+    body: "Dimension evidence can be used as practical, measurable targets for the next assessment cycle.",
   },
 ];
 
