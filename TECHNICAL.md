@@ -14,8 +14,8 @@ Next.js (App Router) + TypeScript + Tailwind CSS v4 (CSS-first config via `@them
 Basic. No trigger for high-performance exists or is expected for a static marketing site.
 
 ## Accounts & platforms
-- **Version control:** GitHub — account: <<fixed, fill in once>>. Repo: <<per-project repo name/URL>>.
-- **Commit author:** <<fixed email, fill in once>>.
+- **Version control:** GitHub — account: `signalaibpi`. Repo: https://github.com/signalaibpi/signal-website. Push access via SSH using the `github-signalaibpi` host alias in `~/.ssh/config` (a dedicated key, separate from Erik's personal GitHub SSH key).
+- **Commit author:** `contact@signalaibpi.com` (set as this repo's local `git config user.email`, not the global default).
 - **Hosting:** Vercel — account: <<fixed, fill in once>>.
 - **Database:** None. This project has no database.
 - **Domain/DNS:** signalaibpi.com — registrar/account: <<fill in>>.
