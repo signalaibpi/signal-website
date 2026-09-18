@@ -15,7 +15,14 @@ export function WhoIsThisFor() {
               transformation
             </h2>
           </div>
-          <div className="lg:col-span-7 flex flex-col gap-8">
+          <div className="lg:col-span-7 flex flex-col gap-8 lg:pt-10">
+            <div className="flex flex-col gap-4 font-body text-xl leading-relaxed text-on-surface-variant">
+              <p>
+                We focus on sectors where AI can reshape repeatable workflows
+                across the organisation, including software, professional
+                services, distribution, and outsourcing.
+              </p>
+            </div>
             <div className="flex flex-wrap gap-3">
               {SECTORS.map((sector) => (
                 <span
@@ -25,13 +32,6 @@ export function WhoIsThisFor() {
                   {sector}
                 </span>
               ))}
-            </div>
-            <div className="flex flex-col gap-4 font-body text-xl leading-relaxed text-on-surface-variant">
-              <p>
-                We focus on sectors where AI can reshape repeatable workflows
-                across the organisation, including software, professional
-                services, distribution, and outsourcing.
-              </p>
             </div>
             <ImagePlaceholder
               label="executive and operational leaders reviewing a diagnostic report"
