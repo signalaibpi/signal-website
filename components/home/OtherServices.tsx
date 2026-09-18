@@ -21,7 +21,7 @@ export function OtherServices() {
         <div className="max-w-3xl flex flex-col gap-4">
           <SectionEyebrow>Other services</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-            Turn the Business AI Diagnostic findings into progress
+            Turn findings into progress
           </h2>
           <p className="font-body text-xl leading-relaxed text-on-surface-variant">
             Once gaps are known, Signal can also help senior leadership and frontline teams
@@ -50,7 +50,7 @@ export function OtherServices() {
           className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
           href="#"
         >
-          <span>Explore Signal services</span>
+          <span>Explore Signal’s other services</span>
           <ArrowRightIcon className="w-4 h-4" />
         </a>
       </div>

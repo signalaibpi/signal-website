@@ -3,15 +3,15 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const BENEFITS = [
   {
-    title: "Prioritise the AI use cases",
-    body: "In the planning phase, the Business AI Diagnostic compares potential use cases and identifies whether data, systems and teams are ready to scale AI.",
+    title: "Strategic prioritisation",
+    body: "In the planning phase, the Business AI Diagnostic compares potential AI use cases and identifies whether data, systems and teams are ready to scale AI.",
   },
   {
-    title: "Find what is holding progress back",
-    body: "When an AI pilot or application is underperforming, the Business AI Diagnostic identifies the most important underlying issues across people, processes, data and technology.",
+    title: "From pilot to production",
+    body: "When an early AI implementation is underperforming, the Business AI Diagnostic identifies the underlying issues across people, processes, data and technology.",
   },
   {
-    title: "Scale AI where it is already working",
+    title: "Scaling AI",
     body: "When AI is already delivering results, the Business AI Diagnostic identifies the capabilities needed to make continued progress sustainable.",
   },
 ];
