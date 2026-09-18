@@ -1,7 +1,7 @@
 import { SectionEyebrow } from "./SectionEyebrow";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
-const SECTORS = ["Software", "Professional Services", "Distribution", "Outsourcing"];
+const SECTORS = ["Fintech", "Software", "Outsourcing", "Professional Services"];
 
 export function WhoIsThisFor() {
   return (
@@ -11,7 +11,7 @@ export function WhoIsThisFor() {
           <div className="lg:col-span-5 flex flex-col gap-4">
             <SectionEyebrow>Who is this for</SectionEyebrow>
             <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-              For CEOs and COOs looking to regain control of AI
+              For organisations looking to regain control of AI
               transformation
             </h2>
           </div>
@@ -19,8 +19,8 @@ export function WhoIsThisFor() {
             <div className="flex flex-col gap-4 font-body text-xl leading-relaxed text-on-surface-variant">
               <p>
                 We focus on sectors where AI can reshape repeatable workflows
-                across the organisation, including software, professional
-                services, distribution, and outsourcing.
+                across the organisation, including fintech, software, outsourcing and 
+                professional services.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
