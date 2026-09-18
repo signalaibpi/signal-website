@@ -1,5 +1,4 @@
 import { ArrowRightIcon } from "@/lib/icons";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const DIMENSIONS = [
   { number: "01", name: "AI Strategy" },
@@ -54,12 +53,8 @@ export function Hero() {
           </div>
 
           {/* Right composition */}
-          <div className="lg:col-span-6 relative">
-            <ImagePlaceholder
-              label="analyst reviewing diagnostic documents at a desk"
-              aspect="aspect-[4/3]"
-            />
-            <div className="relative lg:-mt-24 lg:-ml-6 bg-surface-container-lowest rounded-xl p-6 sm:p-7 shadow-lg border border-outline-variant/40 max-w-lg mx-auto lg:mx-0">
+          <div className="lg:col-span-6">
+            <div className="bg-surface-container-lowest rounded-xl p-6 sm:p-7 shadow-lg border border-outline-variant/40 max-w-lg mx-auto lg:mx-0">
               <div className="flex items-center justify-between pb-4 border-b border-outline-variant/20">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary" />
