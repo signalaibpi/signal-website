@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionEyebrow } from "./SectionEyebrow";
 
 export function Founder() {
@@ -6,13 +7,24 @@ export function Founder() {
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
         <div className="bg-surface-container-low rounded-2xl p-8 sm:p-14 lg:p-16 border border-outline-variant/40">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-5 flex flex-col gap-4">
+            <div className="lg:col-span-3">
+              <div className="inline-block rounded-2xl bg-primary p-3">
+                <Image
+                  src="/erik-de-kroon.jpg"
+                  alt="Erik de Kroon, Founder of Signal"
+                  width={400}
+                  height={400}
+                  className="w-full max-w-[220px] h-auto rounded-xl"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-4 flex flex-col gap-4">
               <SectionEyebrow>Founder</SectionEyebrow>
               <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
                 AI expertise. CEO experience.
               </h2>
             </div>
-            <div className="lg:col-span-7 flex flex-col gap-6 text-on-surface-variant font-body text-xl leading-relaxed">
+            <div className="lg:col-span-5 flex flex-col gap-6 text-on-surface-variant font-body text-xl leading-relaxed">
               <p>
                 Signal was founded by Erik de Kroon, who has worked across
                 AI, strategy, product and company leadership.
