@@ -4,27 +4,27 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 const STEPS = [
   {
     number: "01",
+    product: "AI Snapshot",
     title: "Start with an AI Snapshot",
     body: "We speak with your team to identify your most likely strengths, gaps and next step.",
-    active: true,
   },
   {
     number: "02",
+    product: "Business AI Diagnostic",
     title: "Establish the evidence",
     body: "The Business AI Diagnostic assesses progress across strategy, implementation, operation and governance.",
-    active: false,
   },
   {
     number: "03",
+    product: "AI Strategy Planning",
     title: "Agree what matters most",
     body: "We translate the findings into clear priorities, owners and measurable targets.",
-    active: false,
   },
   {
     number: "04",
+    product: "Embedded AI Delivery",
     title: "Build the capability to deliver",
     body: "Where needed, we help frontline AI leaders improve performance, adoption and control.",
-    active: false,
   },
 ];
 
@@ -48,16 +48,15 @@ export function HowItWorks() {
               key={step.number}
               className="flex flex-col gap-4 pt-6 relative bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/40"
             >
-              <div
-                className={`absolute -top-3 left-6 px-3 py-0.5 rounded font-display text-xs font-bold ${
-                  step.active
-                    ? "bg-primary text-white"
-                    : "bg-surface-container text-secondary border border-outline-variant/40"
-                }`}
-              >
+              <div className="absolute -top-3 left-6 px-3 py-0.5 rounded font-display text-xs font-bold bg-surface-container text-secondary border border-outline-variant/40">
                 {step.number}
               </div>
-              <h3 className="font-display text-lg text-on-surface font-bold pt-1">
+              <div className="flex justify-end">
+                <span className="text-[10px] uppercase tracking-widest text-on-surface-variant/60 font-semibold text-right">
+                  {step.product}
+                </span>
+              </div>
+              <h3 className="font-display text-lg text-on-surface font-bold">
                 {step.title}
               </h3>
               <p className="font-body text-sm leading-relaxed text-on-surface-variant">
