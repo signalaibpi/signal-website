@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { SectionEyebrow } from "./SectionEyebrow";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ArrowRightIcon } from "@/lib/icons";
 
 export function OurApproach() {
@@ -36,10 +36,15 @@ export function OurApproach() {
             </a>
           </div>
           <div className="lg:col-span-6">
-            <ImagePlaceholder
-              label="frontline operational and data teams reviewing workflows"
-              aspect="aspect-[4/3]"
-            />
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/40">
+              <Image
+                src="/home-our-approach.png"
+                alt="Frontline operational and data teams reviewing workflows"
+                fill
+                sizes="(min-width: 1024px) 544px, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
