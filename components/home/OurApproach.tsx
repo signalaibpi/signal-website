@@ -19,19 +19,14 @@ export function OurApproach() {
                 turn AI into better business results. 
               </p>
               <p>
-                Signal helps frontline teams take
-                ownership of AI results. We call this{" "}
-                <strong className="font-semibold text-on-surface">
-                  frontline-centred AI transformation
-                </strong>
-                .
+                Signal believes it is crucial for frontline teams to take ownership of AI results.
               </p>
             </div>
             <a
               className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
               href="#"
             >
-              <span>Read more about frontline-centred AI transformation</span>
+              <span>Read more about how to build frontline ownership of AI</span>
               <ArrowRightIcon className="w-4 h-4" />
             </a>
           </div>

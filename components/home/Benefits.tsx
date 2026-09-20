@@ -4,7 +4,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 const BENEFITS = [
   {
     title: "Strategic prioritisation",
-    body: "In the planning phase, the Business AI Diagnostic compares potential AI use cases and identifies whether data, systems and teams are ready to scale AI.",
+    body: "In the planning phase, the Business AI Diagnostic compares potential AI use cases and identifies whether data, systems and teams are ready to implement AI.",
   },
   {
     title: "From pilot to production",

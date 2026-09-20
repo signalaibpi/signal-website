@@ -11,8 +11,7 @@ export function WhoIsThisFor() {
           <div className="lg:col-span-5 flex flex-col gap-4">
             <SectionEyebrow>Who is this for</SectionEyebrow>
             <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-              For organisations looking to regain control of AI
-              transformation
+              For organisations looking to reshape workflows
             </h2>
           </div>
           <div className="lg:col-span-7 flex flex-col gap-8 lg:pt-10">

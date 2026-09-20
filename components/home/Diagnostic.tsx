@@ -4,18 +4,18 @@ import { ArrowRightIcon, ChecklistIcon, FlagIcon, SearchIcon } from "@/lib/icons
 const CARDS = [
   {
     icon: SearchIcon,
-    title: "Finds what is holding AI back",
+    title: "Finds AI adoption blockers",
     body: "Collects evidence of AI performance for all AI use cases, all teams and all 12 dimensions.",
   },
   {
     icon: ChecklistIcon,
     title: "Suggests priority areas",
-    body: "Scores along 12 dimensions to identify which ones are holding progress back most.",
+    body: "Scores along 12 dimensions to identify which ones are holding adoption back most.",
   },
   {
     icon: FlagIcon,
     title: "Tracks progress",
-    body: "Dimension evidence can be used as practical, measurable targets for the next assessment cycle.",
+    body: "Dimension evidence used as practical, measurable targets for the next assessment cycle.",
   },
 ];
 
@@ -26,11 +26,11 @@ export function Diagnostic() {
         <div className="max-w-3xl flex flex-col gap-4">
           <SectionEyebrow>Business AI Diagnostic</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-            Know where AI stands. Decide what to fix next. Track progress.
+            Know where you stand. Decide what to fix next. Track progress.
           </h2>
           <p className="font-body text-xl leading-relaxed text-on-surface-variant">
             The Business AI Diagnostic continuously assesses your use of AI across 12
-            dimensions and gives an evidence-based view of strengths,
+            frontline-focused dimensions and gives an evidence-based view of strengths,
             gaps and priorities for improvement.
           </p>
         </div>

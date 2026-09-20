@@ -46,7 +46,7 @@ export function Hero() {
             </h1>
             <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant max-w-xl">
               Signal shows CEOs and COOs what’s holding back frontline AI adoption
-              and what to fix next.
+              and how to improve it.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <a
