@@ -39,7 +39,7 @@ export function HowItWorks() {
           </h2>
         </div>
         <ImagePlaceholder
-          label="diagnostic printouts and notebook on a work table"
+          label="Collaborate"
           aspect="aspect-[21/9]"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-4">

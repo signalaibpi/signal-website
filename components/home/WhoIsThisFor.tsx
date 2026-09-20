@@ -34,7 +34,7 @@ export function WhoIsThisFor() {
               ))}
             </div>
             <ImagePlaceholder
-              label="executive and operational leaders reviewing a diagnostic report"
+              label="Frontline"
               aspect="aspect-[16/9]"
             />
           </div>

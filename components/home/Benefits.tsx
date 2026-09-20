@@ -30,7 +30,7 @@ export function Benefits() {
           </p>
         </div>
         <ImagePlaceholder
-          label="leaders and frontline teams reviewing AI priorities together"
+          label="Atmosphere"
           aspect="aspect-[21/9]"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
