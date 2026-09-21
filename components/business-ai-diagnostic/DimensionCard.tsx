@@ -37,7 +37,7 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
         ref={triggerRef}
         type="button"
         onClick={() => setOpen(true)}
-        className={`w-full text-left p-6 rounded-lg flex flex-col gap-3 min-h-[132px] ${style.tint} border border-outline-variant/30 transition-shadow hover:shadow-lg focus:shadow-lg`}
+        className={`w-full text-left p-6 rounded-lg flex flex-col gap-4 min-h-[188px] ${style.tint} border border-outline-variant/30 transition-shadow hover:shadow-lg focus:shadow-lg`}
       >
         <div className="flex items-center justify-between">
           <span className={`font-body text-[10px] font-bold leading-none uppercase tracking-wide ${style.text}`}>
@@ -47,7 +47,7 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
             {dimension.area}
           </span>
         </div>
-        <span className="font-display text-lg leading-snug text-on-surface font-bold">
+        <span className="font-display text-3xl leading-snug text-on-surface font-bold">
           {dimension.name}
         </span>
       </button>
