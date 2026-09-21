@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { SectionEyebrow } from "./SectionEyebrow";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const BENEFITS = [
   {
@@ -29,10 +29,15 @@ export function Benefits() {
             The Business AI Diagnostic informs AI strategy planning, pilots and roll-outs.
           </p>
         </div>
-        <ImagePlaceholder
-          label="Atmosphere"
-          aspect="aspect-[21/9]"
-        />
+        <div className="relative w-full aspect-[21/9] rounded-xl overflow-hidden border border-outline-variant/40">
+          <Image
+            src="/home-benefits.png"
+            alt="Colleagues discussing AI initiatives around a table in a ground-floor office"
+            fill
+            sizes="(min-width: 1280px) 1152px, (min-width: 768px) calc(100vw - 80px), calc(100vw - 40px)"
+            className="object-cover"
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {BENEFITS.map((benefit) => (
             <div
