@@ -37,10 +37,10 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
         ref={triggerRef}
         type="button"
         onClick={() => setOpen(true)}
-        className={`w-full text-left p-5 rounded-lg flex flex-col gap-2 ${style.tint} border border-outline-variant/30 transition-shadow hover:shadow-lg focus:shadow-lg`}
+        className={`w-full text-left p-6 rounded-lg flex flex-col gap-3 min-h-[132px] ${style.tint} border border-outline-variant/30 transition-shadow hover:shadow-lg focus:shadow-lg`}
       >
         <div className="flex items-center justify-between">
-          <span className={`font-display text-2xl font-bold ${style.text}`}>
+          <span className={`font-body text-[10px] font-bold leading-none uppercase tracking-wide ${style.text}`}>
             {dimension.number}
           </span>
           <span className="font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
@@ -64,14 +64,14 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby={titleId}
-                className={`relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-lg border border-outline-variant/40 ${style.tint}`}
+                className={`relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-xl p-8 shadow-lg border border-outline-variant/40 ${style.tint}`}
               >
                 <button
                   ref={closeRef}
                   type="button"
                   onClick={close}
                   aria-label="Close"
-                  className="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full text-secondary hover:text-on-surface hover:bg-on-surface/5 transition-colors"
+                  className="absolute top-5 right-5 flex items-center justify-center w-8 h-8 rounded-full text-secondary hover:text-on-surface hover:bg-on-surface/5 transition-colors"
                 >
                   <svg
                     width="16"
@@ -90,34 +90,29 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
                 </button>
 
                 <div className="flex items-center justify-between pr-10">
-                  <span className={`font-display text-2xl font-bold ${style.text}`}>
+                  <span className={`font-body text-[10px] font-bold leading-none uppercase tracking-wide ${style.text}`}>
                     {dimension.number}
                   </span>
                   <span className="font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
-                    {dimension.area}
+                    {dimension.area}, Weight {dimension.weight}
                   </span>
                 </div>
                 <h3
                   id={titleId}
-                  className="font-display text-xl leading-snug text-on-surface font-bold mt-1"
+                  className="font-display text-xl leading-snug text-on-surface font-bold mt-3"
                 >
                   {dimension.name}
                 </h3>
 
-                <div className="flex items-start justify-between gap-3 mt-4">
-                  <p className="font-body text-sm leading-snug text-on-surface font-bold">
-                    {dimension.summary}
-                  </p>
-                  <span className="shrink-0 font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
-                    Weight: {dimension.weight}
-                  </span>
-                </div>
+                <p className="font-body text-sm leading-relaxed text-on-surface font-bold mt-5">
+                  {dimension.summary}
+                </p>
 
-                <ul className="flex flex-col gap-2 mt-4">
+                <ul className="flex flex-col gap-3 mt-5">
                   {dimension.questions.map((question) => (
                     <li
                       key={question}
-                      className="font-body text-sm leading-snug text-on-surface-variant pl-3 border-l-2 border-outline-variant/40"
+                      className="font-body text-sm leading-relaxed text-on-surface-variant pl-3 border-l-2 border-outline-variant/40"
                     >
                       {question}
                     </li>
