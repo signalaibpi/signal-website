@@ -47,7 +47,7 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
             {dimension.area}
           </span>
         </div>
-        <span className="font-display text-3xl leading-snug text-on-surface font-bold">
+        <span className="font-display text-3xl leading-snug text-on-surface-variant font-bold">
           {dimension.name}
         </span>
       </button>
@@ -99,7 +99,7 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
                 </div>
                 <h3
                   id={titleId}
-                  className="font-display text-xl leading-snug text-on-surface font-bold mt-3"
+                  className="font-display text-xl leading-snug text-on-surface-variant font-bold mt-3"
                 >
                   {dimension.name}
                 </h3>
