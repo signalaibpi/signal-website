@@ -1,85 +1,133 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { AREA_STYLES, type Dimension } from "./dimensions-data";
 
 export function DimensionCard({ dimension }: { dimension: Dimension }) {
-  const [flipped, setFlipped] = useState(false);
+  const [open, setOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
   const style = AREA_STYLES[dimension.area];
-  const face = `absolute inset-0 [backface-visibility:hidden] p-4 rounded-lg flex flex-col ${style.tint} border border-outline-variant/30`;
+  const titleId = `dimension-${dimension.number}-title`;
+
+  function close() {
+    setOpen(false);
+    triggerRef.current?.focus();
+  }
+
+  useEffect(() => {
+    if (!open) return;
+    closeRef.current?.focus();
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") close();
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
 
   return (
-    <div className="group relative [perspective:1200px]">
-      {/*
-        Desktop hover/keyboard-focus flip is pure CSS (group-hover /
-        focus-within) — deliberately NOT mirrored with onMouseEnter/onFocus
-        JS handlers. A tapped button on touch fires a synthetic
-        mouseenter-then-click sequence; if hover also set React state, that
-        sequence would flip then immediately flip back on the same tap. Click
-        is the only JS-driven trigger, so it can't race with hover.
-      */}
+    <>
       <button
+        ref={triggerRef}
         type="button"
-        aria-expanded={flipped}
-        onClick={(e) => {
-          // Flipping back must also blur: the click itself focuses the
-          // button, and focus-within would otherwise keep it flipped even
-          // after `flipped` turns false (seen when testing a second tap).
-          // Capture the target now — React nulls the synthetic event's
-          // fields before the setState updater below runs.
-          const target = e.currentTarget;
-          setFlipped((f) => {
-            const next = !f;
-            if (!next) target.blur();
-            return next;
-          });
-        }}
-        className="relative block w-full h-96 text-left"
+        onClick={() => setOpen(true)}
+        className={`w-full text-left p-5 rounded-lg flex flex-col gap-2 ${style.tint} border border-outline-variant/30 transition-shadow hover:shadow-lg focus:shadow-lg`}
       >
-        <div
-          className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] motion-reduce:transition-none group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)] ${
-            flipped ? "[transform:rotateY(180deg)]" : ""
-          }`}
-        >
-          <div aria-hidden={flipped} className={`${face} gap-1.5`}>
-            <div className="flex items-center justify-between">
-              <span className={`font-display text-lg font-bold ${style.text}`}>
-                {dimension.number}
-              </span>
-              <span className="font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
-                {dimension.area}
-              </span>
-            </div>
-            <span className="font-body text-sm leading-tight text-on-surface font-semibold">
-              {dimension.name}
-            </span>
-          </div>
-
-          <div
-            aria-hidden={!flipped}
-            className={`${face} gap-3 overflow-y-auto [transform:rotateY(180deg)]`}
-          >
-            <div className="flex items-start justify-between gap-2">
-              <p className="font-body text-sm leading-snug text-on-surface font-bold">
-                {dimension.summary}
-              </p>
-              <span className="shrink-0 font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
-                Weight: {dimension.weight}
-              </span>
-            </div>
-            <ul className="flex flex-col gap-2">
-              {dimension.questions.map((question) => (
-                <li
-                  key={question}
-                  className="font-body text-sm leading-snug text-on-surface-variant pl-3 border-l-2 border-outline-variant/40"
-                >
-                  {question}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="flex items-center justify-between">
+          <span className={`font-display text-2xl font-bold ${style.text}`}>
+            {dimension.number}
+          </span>
+          <span className="font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
+            {dimension.area}
+          </span>
         </div>
+        <span className="font-display text-lg leading-snug text-on-surface font-bold">
+          {dimension.name}
+        </span>
       </button>
-    </div>
+
+      {open
+        ? createPortal(
+            <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+              <div
+                className="absolute inset-0 bg-on-surface/40"
+                onClick={close}
+                aria-hidden="true"
+              />
+              <div
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby={titleId}
+                className={`relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-lg border border-outline-variant/40 ${style.tint}`}
+              >
+                <button
+                  ref={closeRef}
+                  type="button"
+                  onClick={close}
+                  aria-label="Close"
+                  className="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full text-secondary hover:text-on-surface hover:bg-on-surface/5 transition-colors"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M2 2L14 14M14 2L2 14"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
+
+                <div className="flex items-center justify-between pr-10">
+                  <span className={`font-display text-2xl font-bold ${style.text}`}>
+                    {dimension.number}
+                  </span>
+                  <span className="font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
+                    {dimension.area}
+                  </span>
+                </div>
+                <h3
+                  id={titleId}
+                  className="font-display text-xl leading-snug text-on-surface font-bold mt-1"
+                >
+                  {dimension.name}
+                </h3>
+
+                <div className="flex items-start justify-between gap-3 mt-4">
+                  <p className="font-body text-sm leading-snug text-on-surface font-bold">
+                    {dimension.summary}
+                  </p>
+                  <span className="shrink-0 font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
+                    Weight: {dimension.weight}
+                  </span>
+                </div>
+
+                <ul className="flex flex-col gap-2 mt-4">
+                  {dimension.questions.map((question) => (
+                    <li
+                      key={question}
+                      className="font-body text-sm leading-snug text-on-surface-variant pl-3 border-l-2 border-outline-variant/40"
+                    >
+                      {question}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
+    </>
   );
 }
