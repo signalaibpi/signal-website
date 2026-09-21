@@ -64,14 +64,14 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby={titleId}
-                className={`relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-xl p-8 shadow-lg border border-outline-variant/40 ${style.tint}`}
+                className={`relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-xl p-12 shadow-lg border border-outline-variant/40 ${style.tint}`}
               >
                 <button
                   ref={closeRef}
                   type="button"
                   onClick={close}
                   aria-label="Close"
-                  className="absolute top-5 right-5 flex items-center justify-center w-8 h-8 rounded-full text-secondary hover:text-on-surface hover:bg-on-surface/5 transition-colors"
+                  className="absolute top-7 right-7 flex items-center justify-center w-8 h-8 rounded-full text-secondary hover:text-on-surface hover:bg-on-surface/5 transition-colors"
                 >
                   <svg
                     width="16"
@@ -108,7 +108,11 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
                   {dimension.summary}
                 </p>
 
-                <ul className="flex flex-col gap-3 mt-5">
+                <p className="font-body text-sm leading-relaxed text-secondary mt-5">
+                  Example questions include:
+                </p>
+
+                <ul className="flex flex-col gap-3 mt-3">
                   {dimension.questions.map((question) => (
                     <li
                       key={question}
