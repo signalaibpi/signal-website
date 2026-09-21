@@ -3,7 +3,7 @@ import { SectionEyebrow } from "./SectionEyebrow";
 
 export function Founder() {
   return (
-    <section className="w-full bg-surface py-20 sm:py-24 border-b border-outline-variant/20">
+    <section className="w-full bg-surface py-16 sm:py-20 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
         <div className="bg-surface-container-low rounded-2xl p-8 sm:p-14 lg:p-16 border border-outline-variant/40">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

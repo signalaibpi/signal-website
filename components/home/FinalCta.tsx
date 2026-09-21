@@ -1,6 +1,6 @@
 export function FinalCta() {
   return (
-    <section className="w-full bg-surface py-20 sm:py-24">
+    <section className="w-full bg-surface py-16 sm:py-20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
         <div className="bg-surface-container-low rounded-2xl p-8 sm:p-16 lg:p-20 border border-outline-variant/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div className="flex flex-col gap-4 max-w-2xl">

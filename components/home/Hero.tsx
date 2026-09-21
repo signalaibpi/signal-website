@@ -31,7 +31,7 @@ const DIMENSIONS: { number: string; name: string; area: Area }[] = [
 export function Hero() {
   return (
     <section className="w-full bg-surface-container-lowest border-b border-outline-variant/20">
-      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 pt-14 pb-24">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 pt-14 pb-16 sm:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left content */}
           <div className="lg:col-span-6 flex flex-col gap-6 pt-2">

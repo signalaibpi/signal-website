@@ -15,7 +15,7 @@ const PANELS = [
 
 export function WhyItApplies() {
   return (
-    <section className="w-full bg-surface py-20 sm:py-24">
+    <section className="w-full bg-surface py-16 sm:py-20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {PANELS.map((panel) => (

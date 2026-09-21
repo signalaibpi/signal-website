@@ -16,7 +16,7 @@ const MODULES = [
 
 export function OtherServices() {
   return (
-    <section className="w-full bg-surface py-20 sm:py-24 border-b border-outline-variant/20">
+    <section className="w-full bg-surface py-16 sm:py-20 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex flex-col gap-14">
         <div className="max-w-3xl flex flex-col gap-4">
           <SectionEyebrow>Other services</SectionEyebrow>

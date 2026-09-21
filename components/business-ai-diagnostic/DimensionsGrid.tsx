@@ -4,7 +4,7 @@ import { DimensionCard } from "./DimensionCard";
 
 export function DimensionsGrid() {
   return (
-    <section className="w-full bg-surface-container-lowest py-20 sm:py-24 border-t border-outline-variant/20">
+    <section className="w-full bg-surface-container-lowest py-16 sm:py-20 border-t border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex flex-col gap-14">
         <div className="max-w-3xl flex flex-col gap-4">
           <SectionEyebrow>The 12 diagnostic dimensions</SectionEyebrow>
