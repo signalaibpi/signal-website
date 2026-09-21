@@ -1,5 +1,6 @@
+import Link from "next/link";
+
 const NAV_LINKS = [
-  { label: "Homepage", href: "#" },
   { label: "Business AI Diagnostic", href: "/business-ai-diagnostic" },
   { label: "Who we help", href: "#" },
   { label: "Pricing", href: "#" },
@@ -11,12 +12,12 @@ export function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/30">
       <div className="h-20 max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex items-center justify-between gap-4">
-        <a className="flex items-center gap-1.5 focus:outline-none" href="#">
+        <Link className="flex items-center gap-1.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="/" aria-label="Signal homepage">
           <span className="font-display text-[22px] font-bold tracking-tight text-on-surface">
             Signal
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
-        </a>
+        </Link>
         <nav className="hidden lg:flex items-center gap-6">
           {NAV_LINKS.map((link) => (
             <a
