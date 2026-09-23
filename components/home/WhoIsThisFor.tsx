@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { SectionEyebrow } from "./SectionEyebrow";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const SECTORS = ["Fintech", "Software", "Outsourcing", "Professional Services"];
 
@@ -32,10 +32,15 @@ export function WhoIsThisFor() {
                 </span>
               ))}
             </div>
-            <ImagePlaceholder
-              label="Frontline"
-              aspect="aspect-[16/9]"
-            />
+            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-outline-variant/40">
+              <Image
+                src="/home-who-this-is-for.png"
+                alt="Professionals working at computers across a busy open-plan office"
+                fill
+                sizes="(min-width: 1024px) 608px, calc(100vw - 40px)"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
