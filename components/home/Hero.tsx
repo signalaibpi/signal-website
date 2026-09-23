@@ -42,12 +42,18 @@ export function Hero() {
               </span>
             </div>
             <h1 className="font-display text-[36px] leading-[44px] sm:text-[56px] sm:leading-[64px] tracking-[-0.03em] text-on-surface font-bold">
-              Take control of AI progress
+              Take control of your AI progress
             </h1>
-            <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant max-w-xl">
-              Signal shows CEOs and COOs what’s holding back frontline AI adoption
-              and how to improve it.
-            </p>
+            <div className="flex flex-col gap-3 max-w-xl">
+              <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant">
+                Signal helps CEOs and COOs improve frontline AI adoption.
+              </p>
+              <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant">
+                Signal’s Business AI Diagnostic identifies what’s holding adoption
+                back. Our planning and delivery services turn those insights into
+                measurable business impact.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <a
                 className="inline-flex items-center justify-center rounded-lg bg-primary hover:bg-primary-hover px-6 py-3.5 font-display text-sm text-white font-semibold transition-colors shadow-sm"
