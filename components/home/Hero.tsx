@@ -49,9 +49,9 @@ export function Hero() {
                 Signal helps CEOs and COOs improve frontline AI adoption.
               </p>
               <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant">
-                Signal’s Business AI Diagnostic identifies what’s holding adoption
+                Signal’s diagnostic identifies what’s holding adoption
                 back. Our planning and delivery services turn those insights into
-                measurable business impact.
+                improved business performance.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
