@@ -84,6 +84,16 @@ npm run lint     # eslint
 ```
 No seed data, no environment variables required to run locally.
 
+### Codex desktop verification
+The default Turbopack development and build commands are unreliable in the Codex desktop execution environment: its CSS worker attempts to bind a local port and fails with `Operation not permitted`. Use Next.js's webpack path immediately instead of first retrying Turbopack:
+
+```bash
+npm run dev -- --webpack
+npm run build -- --webpack
+```
+
+Run these commands with the required elevated local/network permission. The production build fetches the configured Google Fonts through `next/font`, so a sandboxed build without network access fails even when the application code is valid. Starting `next dev` may also append a framework-generated agent-rules block to `AGENTS.md`; treat that as unrelated generated output and exclude it from feature commits unless the project deliberately adopts it.
+
 ## Monitoring & error visibility
 None yet. Vercel's own deploy/build failure notifications are the only signal once deployed.
 
