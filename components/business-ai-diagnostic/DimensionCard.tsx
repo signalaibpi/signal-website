@@ -37,14 +37,27 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
         ref={triggerRef}
         type="button"
         onClick={() => setOpen(true)}
-        className={`w-full text-left p-6 rounded-lg flex flex-col gap-4 min-h-[188px] ${style.tint} border border-outline-variant/30 transition-shadow hover:shadow-lg focus:shadow-lg`}
+        className={`group w-full cursor-pointer text-left p-6 rounded-lg flex flex-col gap-4 min-h-[188px] ${style.tint} border border-outline-variant/30 transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-0.5 hover:border-outline-variant/70 hover:shadow-lg focus-visible:-translate-y-0.5 focus-visible:border-outline-variant/70 focus-visible:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary`}
       >
         <div className="flex items-center justify-between">
           <span className={`font-body text-[10px] font-bold leading-none uppercase tracking-wide ${style.text}`}>
             {dimension.number}
           </span>
-          <span className="font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
-            {dimension.area}
+          <span className="flex items-center gap-2.5 text-secondary">
+            <span className="font-body text-[10px] leading-none uppercase tracking-wide">
+              {dimension.area}
+            </span>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+              className="opacity-65 transition-[opacity,transform] duration-200 group-hover:scale-110 group-hover:opacity-100 group-focus-visible:scale-110 group-focus-visible:opacity-100"
+            >
+              <circle cx="7" cy="7" r="6.25" stroke="currentColor" strokeWidth="0.75" />
+              <path d="M7 4V10M4 7H10" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+            </svg>
           </span>
         </div>
         <span className="font-display text-3xl leading-snug text-on-surface-variant font-bold">
