@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 const NAV_LINKS = [
   { label: "Business AI Diagnostic", href: "/business-ai-diagnostic" },
-  { label: "Who we help", href: "#" },
+  { label: "Who we help", href: "/who-we-help" },
   { label: "Pricing", href: "#" },
   { label: "Resources", href: "#" },
   { label: "About", href: "#" },

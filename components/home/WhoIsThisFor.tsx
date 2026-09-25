@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SectionEyebrow } from "./SectionEyebrow";
 
 const SECTORS = ["Fintech", "Software", "Outsourcing", "Professional Services"];
@@ -24,12 +25,13 @@ export function WhoIsThisFor() {
             </div>
             <div className="flex flex-wrap gap-3">
               {SECTORS.map((sector) => (
-                <span
+                <Link
                   key={sector}
-                  className="px-4 py-2.5 rounded-lg bg-surface-container-lowest font-body text-sm font-semibold text-on-surface shadow-sm border border-outline-variant/40"
+                  href="/who-we-help"
+                  className="px-4 py-2.5 rounded-lg bg-surface-container-lowest font-body text-sm font-semibold text-on-surface shadow-sm border border-outline-variant/40 hover:border-outline-variant hover:text-primary transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   {sector}
-                </span>
+                </Link>
               ))}
             </div>
             <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-outline-variant/40">

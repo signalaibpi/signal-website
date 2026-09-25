@@ -26,7 +26,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${plusJakartaSans.variable} ${inter.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
+      className={`${plusJakartaSans.variable} ${inter.variable} h-full antialiased motion-safe:scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-body bg-surface text-on-surface">
         <Header />
