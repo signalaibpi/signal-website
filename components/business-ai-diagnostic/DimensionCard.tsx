@@ -43,25 +43,15 @@ export function DimensionCard({ dimension }: { dimension: Dimension }) {
           <span className={`font-body text-[10px] font-bold leading-none uppercase tracking-wide ${style.text}`}>
             {dimension.number}
           </span>
-          <span className="flex items-center gap-2.5 text-secondary">
-            <span className="font-body text-[10px] leading-none uppercase tracking-wide">
-              {dimension.area}
-            </span>
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-              aria-hidden="true"
-              className="opacity-65 transition-[opacity,transform] duration-200 group-hover:scale-110 group-hover:opacity-100 group-focus-visible:scale-110 group-focus-visible:opacity-100"
-            >
-              <circle cx="7" cy="7" r="6.25" stroke="currentColor" strokeWidth="0.75" />
-              <path d="M7 4V10M4 7H10" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-            </svg>
+          <span className="font-body text-[10px] leading-none uppercase tracking-wide text-secondary">
+            {dimension.area}
           </span>
         </div>
         <span className="font-display text-3xl leading-snug text-on-surface-variant font-bold">
           {dimension.name}
+        </span>
+        <span className="mt-auto self-end font-body text-xs font-medium text-secondary transition-colors group-hover:text-on-surface group-focus-visible:text-on-surface">
+          View details <span aria-hidden="true">→</span>
         </span>
       </button>
 
