@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { SectionEyebrow } from "./SectionEyebrow";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const STEPS = [
   {
@@ -38,10 +38,15 @@ export function HowItWorks() {
             From diagnosis to measurable progress
           </h2>
         </div>
-        <ImagePlaceholder
-          label="Collaborate"
-          aspect="aspect-[21/9]"
-        />
+        <div className="relative w-full aspect-[21/9] rounded-xl overflow-hidden border border-outline-variant/40">
+          <Image
+            src="/home-home-how-it-works.png"
+            alt="Colleagues prioritising workstreams on a planning wall"
+            fill
+            sizes="(min-width: 1280px) 1152px, (min-width: 768px) calc(100vw - 80px), calc(100vw - 40px)"
+            className="object-cover"
+          />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-4">
           {STEPS.map((step) => (
             <div
