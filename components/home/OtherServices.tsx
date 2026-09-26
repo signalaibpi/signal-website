@@ -4,13 +4,18 @@ import { ArrowRightIcon } from "@/lib/icons";
 const MODULES = [
   {
     label: "Service 01",
-    title: "AI Strategy Planning",
-    body: "Helps organisations translate their AI strategy and diagnostic results into clear business priorities, owners, plans and measurable targets.",
+    title: "AI Progress Review",
+    body: "Helps organisations measure AI progress, identify what is holding it back and identify priorities for improvement.",
   },
   {
     label: "Service 02",
+    title: "AI Strategy Planning",
+    body: "Helps organisations translate their AI strategy and progress review results into targets, owners, plans and funding.",
+  },
+  {
+    label: "Service 03",
     title: "Embedded AI Delivery",
-    body: "Helps frontline AI leaders improve AI performance, help their teams adopt AI effectively and take accountability for AI results.",
+    body: "Helps frontline AI leaders deliver improvements while building the team’s ability to continue independently.",
   },
 ];
 
@@ -19,16 +24,16 @@ export function OtherServices() {
     <section className="w-full bg-surface py-16 sm:py-20 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex flex-col gap-14">
         <div className="max-w-3xl flex flex-col gap-4">
-          <SectionEyebrow>Other services</SectionEyebrow>
+          <SectionEyebrow>Services</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-            Turn findings into progress
+            From progress review to delivery
           </h2>
           <p className="font-body text-xl leading-relaxed text-on-surface-variant">
-            Once gaps are known, Signal can also help senior leadership and frontline teams
-            prioritise, plan and fix them.
+            Signal helps senior leadership and frontline teams identify gaps, prioritise what
+            matters, plan improvements and deliver them.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {MODULES.map((mod) => (
             <div
               key={mod.title}
@@ -50,7 +55,7 @@ export function OtherServices() {
           className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
           href="#"
         >
-          <span>Explore Signal’s other services</span>
+          <span>Explore Signal’s services</span>
           <ArrowRightIcon className="w-4 h-4" />
         </a>
       </div>
