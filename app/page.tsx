@@ -5,7 +5,6 @@ import { Benefits } from "@/components/home/Benefits";
 import { OtherServices } from "@/components/home/OtherServices";
 import { WhoIsThisFor } from "@/components/home/WhoIsThisFor";
 import { Founder } from "@/components/home/Founder";
-import { HowItWorks } from "@/components/home/HowItWorks";
 import { FinalCta } from "@/components/home/FinalCta";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <OtherServices />
       <WhoIsThisFor />
       <Founder />
-      <HowItWorks />
       <FinalCta />
     </>
   );
