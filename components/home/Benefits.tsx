@@ -3,15 +3,15 @@ import { SectionEyebrow } from "./SectionEyebrow";
 
 const BENEFITS = [
   {
-    title: "Strategic prioritisation",
+    title: "Strategy",
     body: "In the planning phase, the Business AI Diagnostic compares potential AI use cases and identifies whether data, systems and teams are ready to implement AI.",
   },
   {
-    title: "From pilot to production",
+    title: "Pilots",
     body: "When an early AI implementation is underperforming, the Business AI Diagnostic identifies the underlying issues across people, processes, data and technology.",
   },
   {
-    title: "Scaling AI",
+    title: "Scaling",
     body: "When AI is already delivering results, the Business AI Diagnostic identifies the capabilities needed to make continued progress sustainable.",
   },
 ];
@@ -21,12 +21,12 @@ export function Benefits() {
     <section className="w-full bg-surface py-16 sm:py-20 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex flex-col gap-14">
         <div className="max-w-3xl flex flex-col gap-4">
-          <SectionEyebrow>When the Business AI Diagnostic applies</SectionEyebrow>
+          <SectionEyebrow>Business AI Diagnostic</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-            One diagnostic. Every stage of AI adoption.
+            From strategy to scale
           </h2>
           <p className="font-body text-xl leading-relaxed text-on-surface-variant">
-            The Business AI Diagnostic informs AI strategy planning, pilots and roll-outs.
+            The Business AI Diagnostic informs every step from AI strategy to scaled AI use.
           </p>
         </div>
         <div className="relative w-full aspect-[21/9] rounded-xl overflow-hidden border border-outline-variant/40">
