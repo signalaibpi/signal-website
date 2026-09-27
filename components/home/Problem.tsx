@@ -2,15 +2,15 @@ import Image from "next/image";
 import { SectionEyebrow } from "./SectionEyebrow";
 import { ArrowRightIcon } from "@/lib/icons";
 
-export function OurApproach() {
+export function Problem() {
   return (
     <section className="w-full bg-surface-container-lowest py-16 sm:py-20 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 flex flex-col gap-6">
-            <SectionEyebrow>Our approach</SectionEyebrow>
+            <SectionEyebrow>The problem</SectionEyebrow>
             <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-              AI requires capability across the business
+              When AI investment isn’t producing business results.
             </h2>
             <div className="flex flex-col gap-5 text-on-surface-variant font-body text-lg leading-relaxed">
               <p>
@@ -19,14 +19,14 @@ export function OurApproach() {
                 turn AI into better business results. 
               </p>
               <p>
-                Signal believes it is crucial for frontline teams to take ownership of AI results.
+                Implementing AI tools alone does not establish these capabilities.
               </p>
             </div>
             <a
               className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
               href="#"
             >
-              <span>Read more about how to build frontline ownership of AI</span>
+              <span>Read more about how to build frontline AI capabilities</span>
               <ArrowRightIcon className="w-4 h-4" />
             </a>
           </div>

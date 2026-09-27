@@ -3,23 +3,23 @@ import { ArrowRightIcon } from "@/lib/icons";
 
 const MODULES = [
   {
-    label: "Service 01",
+    label: "Step 01",
     title: "AI Progress Review",
     body: "Helps organisations measure AI progress, identify what is holding it back and identify priorities for improvement.",
   },
   {
-    label: "Service 02",
-    title: "AI Strategy Planning",
-    body: "Helps organisations translate their AI strategy and progress review results into targets, owners, plans and funding.",
+    label: "Step 02",
+    title: "Frontline AI Planning",
+    body: "Helps organisations translate their AI strategy and progress review into targets, plans, governance and funding.",
   },
   {
-    label: "Service 03",
-    title: "Embedded AI Delivery",
+    label: "Step 03",
+    title: "Frontline AI Delivery",
     body: "Helps frontline AI leaders deliver improvements while building the team’s ability to continue independently.",
   },
 ];
 
-export function OtherServices() {
+export function Services() {
   return (
     <section className="w-full bg-surface py-16 sm:py-20 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex flex-col gap-14">
@@ -30,7 +30,7 @@ export function OtherServices() {
           </h2>
           <p className="font-body text-xl leading-relaxed text-on-surface-variant">
             Signal helps senior leadership and frontline teams identify gaps, prioritise what
-            matters, plan improvements and deliver them.
+            matters, plan improvements and deliver.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

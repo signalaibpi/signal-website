@@ -3,8 +3,14 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
+// Shown under the "Services" drop-down, which is the first main menu item.
+const SERVICE_LINKS = [
+  { label: "AI Progress Review", href: "/ai-progress-review" },
+  { label: "Frontline AI Planning", href: "#" },
+  { label: "Frontline AI Delivery", href: "#" },
+];
+
 const NAV_LINKS = [
-  { label: "Business AI Diagnostic", href: "/business-ai-diagnostic" },
   { label: "Who we help", href: "/who-we-help" },
   { label: "Pricing", href: "#" },
   { label: "Resources", href: "#" },
@@ -13,7 +19,10 @@ const NAV_LINKS = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const servicesButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -29,6 +38,34 @@ export function Header() {
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (!servicesOpen) return;
+
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setServicesOpen(false);
+        servicesButtonRef.current?.focus();
+      }
+    }
+
+    // Closes on a click or tap anywhere outside the drop-down, and when
+    // keyboard focus moves out of it.
+    function closeOnOutside(event: Event) {
+      if (!servicesRef.current?.contains(event.target as Node)) {
+        setServicesOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", closeOnEscape);
+    document.addEventListener("pointerdown", closeOnOutside);
+    document.addEventListener("focusin", closeOnOutside);
+    return () => {
+      window.removeEventListener("keydown", closeOnEscape);
+      document.removeEventListener("pointerdown", closeOnOutside);
+      document.removeEventListener("focusin", closeOnOutside);
+    };
+  }, [servicesOpen]);
+
   return (
     <header className="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/30">
       <div className="h-20 max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex items-center justify-between gap-4">
@@ -39,6 +76,37 @@ export function Header() {
           <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
         </Link>
         <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-6">
+          <div ref={servicesRef} className="relative">
+            <button
+              ref={servicesButtonRef}
+              type="button"
+              className="inline-flex items-center gap-1 rounded-sm font-body text-sm text-on-surface-variant hover:text-on-surface transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              aria-expanded={servicesOpen}
+              aria-controls="services-menu"
+              onClick={() => setServicesOpen((open) => !open)}
+            >
+              Services
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className={`size-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              id="services-menu"
+              hidden={!servicesOpen}
+              className="absolute left-0 top-full mt-3 min-w-[240px] rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-2 shadow-lg"
+            >
+              {SERVICE_LINKS.map((link) => (
+                <a
+                  key={link.label}
+                  className="block rounded-lg px-3 py-2.5 font-body text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface focus-visible:outline-2 focus-visible:outline-primary"
+                  href={link.href}
+                  onClick={() => setServicesOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
@@ -82,6 +150,19 @@ export function Header() {
         className="lg:hidden absolute inset-x-0 top-full border-b border-outline-variant/30 bg-surface-container-lowest shadow-lg"
       >
         <div className="max-w-[1280px] mx-auto px-5 md:px-10 py-3 flex flex-col">
+          <span className="px-3 pt-3 pb-1 font-body text-xs uppercase tracking-wider text-secondary font-semibold">
+            Services
+          </span>
+          {SERVICE_LINKS.map((link) => (
+            <a
+              key={link.label}
+              className="block rounded-lg pl-6 pr-3 py-3 font-body text-base text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface focus-visible:outline-2 focus-visible:outline-primary"
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
