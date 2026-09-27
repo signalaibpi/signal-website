@@ -1,7 +1,7 @@
 import { Hero } from "@/components/home/Hero";
 import { Problem } from "@/components/home/Problem";
 import { OurApproach } from "@/components/home/OurApproach";
-import { Benefits } from "@/components/home/Benefits";
+import { WhenToUseSignal } from "@/components/home/WhenToUseSignal";
 import { WhoIsThisFor } from "@/components/home/WhoIsThisFor";
 import { Founder } from "@/components/home/Founder";
 import { FinalCta } from "@/components/home/FinalCta";
@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <Problem />
       <OurApproach />
-      <Benefits />
+      <WhenToUseSignal />
       <WhoIsThisFor />
       <Founder />
       <FinalCta />

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SectionEyebrow } from "./SectionEyebrow";
+import { ArrowRightIcon } from "@/lib/icons";
 
-const SECTORS = ["Fintech", "Software", "Outsourcing", "Professional Services"];
+const SECTORS = ["Fintech", "Software", "Outsourcing", "Other service providers"];
 
 export function WhoIsThisFor() {
   return (
@@ -18,22 +19,29 @@ export function WhoIsThisFor() {
           <div className="lg:col-span-7 flex flex-col gap-8 lg:pt-10">
             <div className="flex flex-col gap-4 font-body text-xl leading-relaxed text-on-surface-variant">
               <p>
-                We focus on sectors where AI can reshape repeatable workflows
+                Signal focuses on sectors where AI can reshape repeatable workflows
                 across the organisation, including fintech, software, outsourcing and 
-                professional services.
+                other service providers like insurance brokers, freight forwarders,
+                accountancies and law firms.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
               {SECTORS.map((sector) => (
-                <Link
+                <span
                   key={sector}
-                  href="/who-we-help"
-                  className="px-4 py-2.5 rounded-lg bg-surface-container-lowest font-body text-sm font-semibold text-on-surface shadow-sm border border-outline-variant/40 hover:border-outline-variant hover:text-primary transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="px-4 py-2.5 rounded-lg bg-surface-container-lowest font-body text-sm font-semibold text-on-surface shadow-sm border border-outline-variant/40"
                 >
                   {sector}
-                </Link>
+                </span>
               ))}
             </div>
+            <Link
+              className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
+              href="/who-we-help"
+            >
+              <span>See who we help</span>
+              <ArrowRightIcon className="w-4 h-4" />
+            </Link>
             <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-outline-variant/40">
               <Image
                 src="/home-who-this-is-for.png"

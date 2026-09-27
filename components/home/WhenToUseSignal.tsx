@@ -3,30 +3,30 @@ import { SectionEyebrow } from "./SectionEyebrow";
 
 const BENEFITS = [
   {
-    title: "Strategy",
-    body: "In the planning phase, the Business AI Diagnostic compares potential AI use cases and identifies whether data, systems and teams are ready to implement AI.",
+    title: "AI strategy phase",
+    body: "In the strategy phase, the progress review becomes a readiness review while planning provides the targets, timelines, governance and funding.",
   },
   {
-    title: "Pilots",
-    body: "When an early AI implementation is underperforming, the Business AI Diagnostic identifies the underlying issues across people, processes, data and technology.",
+    title: "AI pilot phase",
+    body: "In the pilot phase, the progress review identifies readiness for production release while planning and delivery help implement the organisation be ready for that transition.",
   },
   {
-    title: "Scaling",
-    body: "When AI is already delivering results, the Business AI Diagnostic identifies the capabilities needed to make continued progress sustainable.",
+    title: "AI scaling phase",
+    body: "In the scaling phase, the progress review identifies what is needed to make continued progress sustainable while planning and delivery help implement them.",
   },
 ];
 
-export function Benefits() {
+export function WhenToUseSignal() {
   return (
     <section className="w-full bg-surface py-16 sm:py-20 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex flex-col gap-14">
         <div className="max-w-3xl flex flex-col gap-4">
-          <SectionEyebrow>Business AI Diagnostic</SectionEyebrow>
+          <SectionEyebrow>When to use Signal</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
             From strategy to scale
           </h2>
           <p className="font-body text-xl leading-relaxed text-on-surface-variant">
-            The Business AI Diagnostic informs every step from AI strategy to scaled AI use.
+            Signal’s approach helps organisations plan and improve frontline AI adoption every step of the way, from AI strategy to scaled AI use.
           </p>
         </div>
         <div className="relative w-full aspect-[21/9] rounded-xl overflow-hidden border border-outline-variant/40">
