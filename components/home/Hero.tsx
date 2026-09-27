@@ -38,7 +38,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/30 w-fit">
               <span className="w-2 h-2 rounded-full bg-primary" />
               <span className="font-body text-xs text-secondary uppercase tracking-wider font-semibold">
-                Powered by the Business AI Diagnostic
+                Frontline AI transformation
               </span>
             </div>
             <h1 className="font-display text-[36px] leading-[44px] sm:text-[56px] sm:leading-[64px] tracking-[-0.03em] text-on-surface font-bold">
@@ -65,7 +65,7 @@ export function Hero() {
                 className="inline-flex items-center justify-center rounded-lg bg-surface-container-low border border-outline-variant/40 px-6 py-3.5 font-display text-sm text-on-surface font-semibold hover:bg-surface-container transition-colors"
                 href="#"
               >
-                View a sample diagnostic
+                Explore our approach
               </a>
             </div>
           </div>
@@ -76,7 +76,7 @@ export function Hero() {
               <div className="flex items-center gap-2 pb-4 border-b border-outline-variant/20">
                 <span className="w-2 h-2 rounded-full bg-primary" />
                 <span className="font-body text-xs uppercase text-on-surface font-semibold tracking-wider">
-                  Business AI Diagnostic
+                  What drives AI results
                 </span>
               </div>
               <div className="grid grid-cols-3 gap-2.5 pt-4">

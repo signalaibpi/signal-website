@@ -25,7 +25,7 @@ export function OurApproach() {
     <section className="w-full bg-surface py-16 sm:py-20 border-b border-outline-variant/20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 flex flex-col gap-14">
         <div className="max-w-3xl flex flex-col gap-4">
-          <SectionEyebrow>Services</SectionEyebrow>
+          <SectionEyebrow>Our approach</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
             From progress review to delivery
           </h2>
