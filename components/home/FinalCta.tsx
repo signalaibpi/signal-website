@@ -1,3 +1,5 @@
+import { serviceHref } from "@/lib/services";
+
 export function FinalCta() {
   return (
     <section className="w-full bg-surface py-16 sm:py-20">
@@ -17,7 +19,7 @@ export function FinalCta() {
             </a>
             <a
               className="inline-flex items-center justify-center rounded-lg bg-surface-container-lowest border border-outline-variant/40 px-6 py-3.5 font-display text-sm text-on-surface font-semibold hover:bg-surface-container transition-colors text-center"
-              href="#"
+              href={serviceHref("AI Progress Review")}
             >
               Explore AI Progress Review
             </a>

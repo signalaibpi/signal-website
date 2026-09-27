@@ -46,7 +46,7 @@ export function Hero() {
             </h1>
             <div className="flex flex-col gap-3 max-w-xl">
               <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant">
-                Signal helps CEOs and COOs improve frontline AI adoption.
+                Signal helps organisations improve frontline AI adoption.
               </p>
               <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant">
                 Signal’s progress review identifies what’s holding adoption
