@@ -1,5 +1,6 @@
 import { SectionEyebrow } from "./SectionEyebrow";
 import { ArrowRightIcon } from "@/lib/icons";
+import { serviceHref } from "@/lib/services";
 
 const MODULES = [
   {
@@ -48,16 +49,16 @@ export function Services() {
               <p className="font-body text-base leading-relaxed text-on-surface-variant">
                 {mod.body}
               </p>
+              <a
+                className="mt-auto pt-2 inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
+                href={serviceHref(mod.title)}
+              >
+                <span>Explore {mod.title}</span>
+                <ArrowRightIcon className="w-4 h-4" />
+              </a>
             </div>
           ))}
         </div>
-        <a
-          className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
-          href="#"
-        >
-          <span>Explore Signal’s services</span>
-          <ArrowRightIcon className="w-4 h-4" />
-        </a>
       </div>
     </section>
   );

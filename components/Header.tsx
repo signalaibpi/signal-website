@@ -2,13 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-
-// Shown under the "Services" drop-down, which is the first main menu item.
-const SERVICE_LINKS = [
-  { label: "AI Progress Review", href: "/ai-progress-review" },
-  { label: "Frontline AI Planning", href: "#" },
-  { label: "Frontline AI Delivery", href: "#" },
-];
+import { SERVICE_LINKS } from "@/lib/services";
 
 const NAV_LINKS = [
   { label: "Who we help", href: "/who-we-help" },
