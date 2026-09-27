@@ -79,7 +79,7 @@ export function Header() {
               aria-controls="services-menu"
               onClick={() => setServicesOpen((open) => !open)}
             >
-              Services
+              Our Approach
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className={`size-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M6 9l6 6 6-6" />
               </svg>
@@ -145,7 +145,7 @@ export function Header() {
       >
         <div className="max-w-[1280px] mx-auto px-5 md:px-10 py-3 flex flex-col">
           <span className="px-3 pt-3 pb-1 font-body text-xs uppercase tracking-wider text-secondary font-semibold">
-            Services
+            Our Approach
           </span>
           {SERVICE_LINKS.map((link) => (
             <a
