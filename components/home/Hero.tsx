@@ -63,7 +63,7 @@ export function Hero() {
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-lg bg-surface-container-low border border-outline-variant/40 px-6 py-3.5 font-display text-sm text-on-surface font-semibold hover:bg-surface-container transition-colors"
-                href="#"
+                href="#our-approach"
               >
                 Explore our approach
               </a>
