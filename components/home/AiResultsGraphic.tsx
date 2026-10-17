@@ -1,11 +1,12 @@
 type Area = "Implementation" | "Operation" | "Governance";
 
+// Homepage palette reuses the original blue for Operation and grey for Implementation.
 const AREA_STYLES: Record<Area, { tint: string; text: string }> = {
   Implementation: {
-    tint: "bg-area-implementation-tint",
-    text: "text-area-implementation",
+    tint: "bg-area-operation-tint",
+    text: "text-area-operation",
   },
-  Operation: { tint: "bg-area-operation-tint", text: "text-area-operation" },
+  Operation: { tint: "bg-area-strategy-tint", text: "text-area-strategy" },
   Governance: {
     tint: "bg-area-governance-tint",
     text: "text-area-governance",
