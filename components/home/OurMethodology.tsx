@@ -1,5 +1,6 @@
 import { SectionEyebrow } from "./SectionEyebrow";
 import { AiResultsGraphic } from "./AiResultsGraphic";
+import { ArrowRightIcon } from "@/lib/icons";
 
 export function OurMethodology() {
   return (
@@ -12,8 +13,17 @@ export function OurMethodology() {
               Identify root causes and set clear priorities.
             </h2>
             <p className="font-body text-lg leading-relaxed text-on-surface-variant">
-              Signal uses its Business AI Diagnostic methodology to examine key success factors for AI adoption and business results. The findings help identify root causes of disappointing outcomes and provide the basis for agreeing priorities and improvement targets.
+              Signal&rsquo;s Business AI Diagnostic is a comprehensive, evidence-led methodology for identifying root causes
+              of disappointing AI adoption and business results. The findings provide the basis for agreeing
+              priorities and improvement targets.
             </p>
+            <a
+              className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
+              href="#"
+            >
+              <span>Explore the Business AI Diagnostic</span>
+              <ArrowRightIcon className="w-4 h-4" />
+            </a>
           </div>
           <AiResultsGraphic />
         </div>
