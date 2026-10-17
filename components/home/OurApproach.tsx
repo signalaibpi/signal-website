@@ -1,6 +1,5 @@
 import { SectionEyebrow } from "./SectionEyebrow";
 import { ArrowRightIcon } from "@/lib/icons";
-import { AiResultsGraphic } from "./AiResultsGraphic";
 import { serviceHref } from "@/lib/services";
 
 const MODULES = [
@@ -38,33 +37,30 @@ export function OurApproach() {
             matters, plan improvements and deliver.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <div className="flex flex-col gap-6">
-            {MODULES.map((mod) => (
-              <div
-                key={mod.title}
-                className="bg-surface-container-low rounded-xl p-6 sm:p-8 border border-outline-variant/40 flex flex-col gap-4"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {MODULES.map((mod) => (
+            <div
+              key={mod.title}
+              className="bg-surface-container-low rounded-xl p-6 sm:p-8 border border-outline-variant/40 flex flex-col gap-4"
+            >
+              <span className="font-body text-xs uppercase tracking-wider text-secondary font-bold">
+                {mod.label}
+              </span>
+              <h3 className="font-display text-2xl text-on-surface font-bold">
+                {mod.title}
+              </h3>
+              <p className="font-body text-base leading-relaxed text-on-surface-variant">
+                {mod.body}
+              </p>
+              <a
+                className="mt-auto pt-2 inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
+                href={mod.href}
               >
-                <span className="font-body text-xs uppercase tracking-wider text-secondary font-bold">
-                  {mod.label}
-                </span>
-                <h3 className="font-display text-2xl text-on-surface font-bold">
-                  {mod.title}
-                </h3>
-                <p className="font-body text-base leading-relaxed text-on-surface-variant">
-                  {mod.body}
-                </p>
-                <a
-                  className="mt-auto pt-2 inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
-                  href={mod.href}
-                >
-                  <span>Explore {mod.title}</span>
-                  <ArrowRightIcon className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-          <AiResultsGraphic />
+                <span>Explore {mod.title}</span>
+                <ArrowRightIcon className="w-4 h-4" />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
