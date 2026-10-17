@@ -1,9 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { SectionEyebrow } from "./SectionEyebrow";
-import { ArrowRightIcon } from "@/lib/icons";
 
-const SECTORS = ["Fintech", "Software", "Outsourcing", "Other service providers"];
+const SECTORS = ["FinTech", "Software", "Outsourcing", "Other service providers"];
 
 export function WhoIsThisFor() {
   return (
@@ -13,16 +11,14 @@ export function WhoIsThisFor() {
           <div className="lg:col-span-5 flex flex-col gap-4">
             <SectionEyebrow>Who is this for</SectionEyebrow>
             <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-              For organisations looking to reshape workflows
+              For businesses built around repeatable, knowledge-intensive work.
             </h2>
           </div>
           <div className="lg:col-span-7 flex flex-col gap-8 lg:pt-10">
             <div className="flex flex-col gap-4 font-body text-xl leading-relaxed text-on-surface-variant">
               <p>
-                Signal focuses on sectors where AI can reshape repeatable workflows
-                across the organisation, including fintech, software, outsourcing and 
-                other service providers like insurance brokers, freight forwarders,
-                accountancies and law firms.
+                Signal focuses on sectors where AI can reshape repeatable workflows,
+                particularly fintech, software and outsourcing, as well as other service providers.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -35,13 +31,6 @@ export function WhoIsThisFor() {
                 </span>
               ))}
             </div>
-            <Link
-              className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
-              href="/who-we-help"
-            >
-              <span>See who we help</span>
-              <ArrowRightIcon className="w-4 h-4" />
-            </Link>
             <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-outline-variant/40">
               <Image
                 src="/home-who-this-is-for.png"

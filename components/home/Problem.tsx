@@ -14,19 +14,19 @@ export function Problem() {
             </h2>
             <div className="flex flex-col gap-5 text-on-surface-variant font-body text-lg leading-relaxed">
               <p>
-                Implementing AI requires developing the skills, incentives,
+                Getting value from AI requires developing the skills, incentives,
                 ways of working and accountability to help frontline teams
                 turn AI into better business results. 
               </p>
               <p>
-                Implementing AI tools alone does not establish these capabilities.
+                These capabilities don’t develop simply by giving employees AI tools or rolling out AI projects.
               </p>
             </div>
             <a
               className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
               href="#"
             >
-              <span>Read more about how to build frontline AI capabilities</span>
+              <span>Why teams can struggle to get results from AI</span>
               <ArrowRightIcon className="w-4 h-4" />
             </a>
           </div>

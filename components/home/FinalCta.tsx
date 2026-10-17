@@ -15,7 +15,7 @@ export function FinalCta() {
               className="inline-flex items-center justify-center rounded-lg bg-primary hover:bg-primary-hover px-6 py-3.5 font-display text-sm text-white font-semibold transition-colors shadow-sm text-center"
               href="#"
             >
-              Book a free AI Snapshot
+              Book a call
             </a>
             <a
               className="inline-flex items-center justify-center rounded-lg bg-surface-container-lowest border border-outline-variant/40 px-6 py-3.5 font-display text-sm text-on-surface font-semibold hover:bg-surface-container transition-colors text-center"

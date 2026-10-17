@@ -1,22 +1,26 @@
 import { SectionEyebrow } from "./SectionEyebrow";
 import { ArrowRightIcon } from "@/lib/icons";
+import { AiResultsGraphic } from "./AiResultsGraphic";
 import { serviceHref } from "@/lib/services";
 
 const MODULES = [
   {
     label: "Step 01",
     title: "AI Progress Review",
-    body: "Helps organisations measure AI progress, identify what is holding it back and identify priorities for improvement.",
+    href: serviceHref("AI Progress Review"),
+    body: "Helps organisations identify what is holding back AI adoption and business results, and agree priorities for improvement.",
   },
   {
     label: "Step 02",
-    title: "Frontline AI Planning",
-    body: "Helps organisations translate their AI strategy and progress review into targets, plans, governance and funding.",
+    title: "AI Team Planning",
+    href: serviceHref("Frontline AI Planning"),
+    body: "Helps organisations translate agreed priorities into practical plans with clear targets, ownership and resources.",
   },
   {
     label: "Step 03",
-    title: "Frontline AI Delivery",
-    body: "Helps frontline AI leaders deliver improvements while building the team’s ability to continue independently.",
+    title: "AI Team Delivery",
+    href: serviceHref("Frontline AI Delivery"),
+    body: "Helps teams deliver improvements while building their ability to continue independently.",
   },
 ];
 
@@ -30,34 +34,37 @@ export function OurApproach() {
             From progress review to delivery
           </h2>
           <p className="font-body text-xl leading-relaxed text-on-surface-variant">
-            Signal helps senior leadership and frontline teams identify gaps, prioritise what
+            Signal helps teams identify gaps, prioritise what
             matters, plan improvements and deliver.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {MODULES.map((mod) => (
-            <div
-              key={mod.title}
-              className="bg-surface-container-low rounded-xl p-8 sm:p-10 border border-outline-variant/40 flex flex-col gap-4"
-            >
-              <span className="font-body text-xs uppercase tracking-wider text-secondary font-bold">
-                {mod.label}
-              </span>
-              <h3 className="font-display text-2xl text-on-surface font-bold">
-                {mod.title}
-              </h3>
-              <p className="font-body text-base leading-relaxed text-on-surface-variant">
-                {mod.body}
-              </p>
-              <a
-                className="mt-auto pt-2 inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
-                href={serviceHref(mod.title)}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="flex flex-col gap-6">
+            {MODULES.map((mod) => (
+              <div
+                key={mod.title}
+                className="bg-surface-container-low rounded-xl p-6 sm:p-8 border border-outline-variant/40 flex flex-col gap-4"
               >
-                <span>Explore {mod.title}</span>
-                <ArrowRightIcon className="w-4 h-4" />
-              </a>
-            </div>
-          ))}
+                <span className="font-body text-xs uppercase tracking-wider text-secondary font-bold">
+                  {mod.label}
+                </span>
+                <h3 className="font-display text-2xl text-on-surface font-bold">
+                  {mod.title}
+                </h3>
+                <p className="font-body text-base leading-relaxed text-on-surface-variant">
+                  {mod.body}
+                </p>
+                <a
+                  className="mt-auto pt-2 inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
+                  href={mod.href}
+                >
+                  <span>Explore {mod.title}</span>
+                  <ArrowRightIcon className="w-4 h-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+          <AiResultsGraphic />
         </div>
       </div>
     </section>
