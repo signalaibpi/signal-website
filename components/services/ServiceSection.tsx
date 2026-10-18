@@ -1,4 +1,5 @@
 import { ArticleImagePlaceholder } from "@/components/resources/ArticleImagePlaceholder";
+import { CheckIcon } from "@/lib/icons";
 import type { FocusArea } from "./services-data";
 
 // The right column holds either an image placeholder (withImage) or a
@@ -117,11 +118,20 @@ export function FocusAreas({ areas }: { areas: FocusArea[] }) {
   );
 }
 
+// Deliverables use the light blue primary tint so each service ends on a
+// clear "what you get" panel; see TECHNICAL.md decision log (2026-10-18).
 export function Deliverables({ heading, items }: { heading: string; items: readonly string[] }) {
   return (
-    <div className="flex flex-col gap-5 pt-8 border-t border-outline-variant/40">
-      <Label as="h3">{heading}</Label>
-      <Bullets items={items} />
+    <div className="bg-primary-tint rounded-xl p-6 sm:p-8 border border-primary/15 flex flex-col gap-5">
+      <h3 className="font-display text-xl text-on-surface font-bold">{heading}</h3>
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
+        {items.map((item) => (
+          <li key={item} className="flex gap-3 font-body text-base leading-relaxed text-on-surface-variant">
+            <CheckIcon className="w-5 h-5 mt-0.5 shrink-0 text-primary" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

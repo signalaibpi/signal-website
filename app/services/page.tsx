@@ -68,10 +68,12 @@ export default function ServicesPage() {
         }
         aside={<DimensionsTable />}
       >
-        <Deliverables heading="AI Progress Review deliverables" items={PROGRESS_REVIEW_DELIVERABLES} />
-        <p id="planning-cycle-note" className="font-body text-sm text-secondary">
-          *The planning cycle is typically 3 months.
-        </p>
+        <div className="flex flex-col gap-4">
+          <Deliverables heading="AI Progress Review deliverables" items={PROGRESS_REVIEW_DELIVERABLES} />
+          <p id="planning-cycle-note" className="font-body text-sm text-secondary scroll-mt-28">
+            *The planning cycle is typically 3 months.
+          </p>
+        </div>
       </ServiceSection>
 
       <ServiceSection
