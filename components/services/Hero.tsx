@@ -17,24 +17,31 @@ export function Hero() {
               services:
             </p>
             <ul className="flex flex-col border-t border-outline-variant/40 max-w-2xl">
-              {SERVICE_SECTIONS.map((service) => (
+              {SERVICE_SECTIONS.map((service, i) => (
                 <li key={service.id} className="border-b border-outline-variant/40">
                   <a
                     href={`#${service.id}`}
                     className="group flex items-start justify-between gap-4 py-3.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
                   >
-                    <span className="font-body text-base leading-relaxed text-on-surface-variant">
-                      <span className="font-display font-bold text-on-surface group-hover:text-primary transition-colors">
-                        {service.name}
+                    <span className="flex items-baseline gap-4">
+                      {/* Numbers match the sections' "Step 01–03" labels and
+                          show that the services run in sequence. */}
+                      <span className="font-body text-sm font-semibold tabular-nums text-secondary">
+                        {String(i + 1).padStart(2, "0")}
                       </span>
-                      : {service.summary}
+                      <span className="font-body text-base leading-relaxed text-on-surface-variant">
+                        <span className="font-display font-bold text-on-surface group-hover:text-primary transition-colors">
+                          {service.name}
+                        </span>
+                        : {service.summary}
+                      </span>
                     </span>
                     <ArrowRightIcon className="w-4 h-4 mt-1.5 shrink-0 text-primary transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none" />
                   </a>
                 </li>
               ))}
             </ul>
-            <p className="font-body text-base leading-relaxed text-secondary max-w-2xl">
+            <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant max-w-2xl">
               The services build on each other: each later phase starts from
               the agreed outputs of the previous phase. You can stop after any
               phase.
