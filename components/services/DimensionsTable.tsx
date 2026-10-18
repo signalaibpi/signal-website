@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { AREA_STYLES } from "@/components/business-ai-diagnostic/dimensions-data";
 import { FAILURE_MODES } from "./services-data";
 
 export function DimensionsTable() {
@@ -44,11 +43,9 @@ export function DimensionsTable() {
                 className="border-t border-outline-variant/40 align-top"
               >
                 <th scope="row" className="px-4 sm:px-6 py-4 font-normal">
-                  <span className="flex flex-col gap-1">
-                    <span
-                      className={`font-body text-xs uppercase tracking-wider font-semibold ${AREA_STYLES[dimension.area].text}`}
-                    >
-                      {dimension.number} · {dimension.area}
+                  <span className="flex items-baseline gap-3">
+                    <span className="font-body text-sm font-semibold tabular-nums text-secondary">
+                      {dimension.number}
                     </span>
                     <span className="font-display text-base text-on-surface font-bold">
                       {dimension.name}
