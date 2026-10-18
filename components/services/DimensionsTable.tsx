@@ -20,8 +20,15 @@ export function DimensionsTable() {
     <div className="flex flex-col gap-4">
       <div className="overflow-hidden rounded-xl border border-outline-variant/40 bg-surface-container-lowest">
         <table id="failure-modes" className="w-full text-left">
-          <caption className="sr-only">
-            Business AI Diagnostic dimensions and their associated failure modes
+          {/* Same header treatment as the homepage "What drives AI results"
+              graphic, so "dimension" has context. */}
+          <caption className="text-left px-4 sm:px-6 py-4 border-b border-outline-variant/20">
+            <span className="flex items-center gap-2">
+              <span aria-hidden="true" className="w-2 h-2 rounded-full bg-primary" />
+              <span className="font-body text-xs uppercase text-on-surface font-semibold tracking-wider">
+                What drives AI results
+              </span>
+            </span>
           </caption>
           <thead className="bg-surface-container-low">
             <tr>
