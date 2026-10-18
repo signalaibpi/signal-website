@@ -1,15 +1,15 @@
 const PANELS = [
   {
-    title: "Assess readiness before launch",
-    body: "For applications that are not live, the Diagnostic assesses whether the organisation is ready to launch and what level it is likely to reach. This helps leaders identify where groundwork is needed first.",
+    title: "Prioritise with a realistic view of readiness",
+    body: "Many dimensions can be assessed before an AI application is built. Checking data, integration and workforce readiness helps leaders judge which initiatives are ready to proceed and which need groundwork first.",
   },
   {
-    title: "See the outcomes that matter",
-    body: "The Diagnostic looks at results visible to frontline teams and senior management, including AI performance, costs, adoption and control. Technical choices may explain the results, but are not scored directly.",
+    title: "Find what is holding AI back",
+    body: "The diagnostic combines scores across 12 dimensions with root cause analysis to investigate why progress is stalling and identify what needs attention.",
   },
   {
-    title: "Build a rounded view of AI",
-    body: "Implementation, Operation and Governance are assessed across 12 dimensions. Process scores are evidence-based and paired with a quality indicator that adds expert judgement about coverage, design and fit.",
+    title: "Give teams clear improvement targets",
+    body: "Findings become targets for specific capabilities, with an agreed timeframe—for example, improving data quality to a defined level within three months.",
   },
 ];
 
