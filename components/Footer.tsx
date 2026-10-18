@@ -3,13 +3,17 @@ import Link from "next/link";
 const MENU_LINKS = [
   { label: "Our Services", href: "/services" },
   { label: "Who we work with", href: "/who-we-help" },
-  { label: "Resources", href: "#" },
+  { label: "Resources", href: "/resources" },
   { label: "About", href: "#" },
 ];
 
 const RESOURCE_LINKS = [
   { label: "Business AI Diagnostic", href: "/business-ai-dashboard" },
   { label: "Sample Business AI Diagnostic", href: "#" },
+  {
+    label: "Why teams can struggle to get results from AI",
+    href: "/resources/why-teams-can-struggle-to-get-results-from-ai",
+  },
 ];
 
 const CONTACT_LINKS = [{ label: "Contact us", href: "#" }];

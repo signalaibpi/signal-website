@@ -22,7 +22,7 @@ export function Problem() {
           </div>
           <a
             className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
-            href="#"
+            href="/resources/why-teams-can-struggle-to-get-results-from-ai"
           >
             <span>Why teams can struggle to get results from AI</span>
             <ArrowRightIcon className="w-4 h-4" />
