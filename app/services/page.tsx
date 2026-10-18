@@ -45,7 +45,7 @@ export default function ServicesPage() {
                 efficiently collect the required evidence for a wide range of
                 potential root causes
               </>,
-              "The Signal founder has the required combination of AI expertise, strategic perspective and operating experience to identify root causes and help set priorities",
+              "The Signal founder has a combination of AI expertise, strategic perspective and operating experience to identify root causes and help set priorities",
             ]}
           >
             <div className="flex flex-col gap-6">

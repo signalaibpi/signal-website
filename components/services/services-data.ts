@@ -5,7 +5,7 @@ export const SERVICE_SECTIONS = [
   {
     id: "ai-progress-review",
     name: "AI Progress Review",
-    summary: "identify root causes, set priorities",
+    summary: "identify issues, set priorities",
   },
   {
     id: "ai-planning",

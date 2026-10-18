@@ -13,7 +13,7 @@ export function Problem() {
           <div className="max-w-4xl flex flex-col gap-5 text-on-surface-variant font-body text-lg leading-relaxed">
             <p>
               Getting value from AI requires developing the skills, incentives,
-              ways of working and accountability to help frontline teams
+              ways of working and accountability to help teams
               turn AI into better business results.
             </p>
             <p>
