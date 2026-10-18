@@ -13,14 +13,11 @@ export function Hero() {
               </span>
             </div>
             <h1 className="font-display text-[36px] leading-[44px] sm:text-[56px] sm:leading-[64px] tracking-[-0.03em] text-on-surface font-bold">
-              See what is helping or holding back your AI
+              Make your AI transformation measurable
             </h1>
             <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant max-w-xl">
-              An evidence-based assessment of how your organisation is
-              adopting generative AI. The Diagnostic shows how well you
-              implement, operate and govern AI, using outcomes visible to
-              frontline teams and senior leaders to identify priorities for
-              improvement.
+              The Business AI Diagnostic builds an evidence-based assessment of your organisation’s AI progress 
+              to help identify root causes of what is holding it back and set priorities for improvement.
             </p>
             <div className="pt-2">
               <a

@@ -1,6 +1,6 @@
 const PANELS = [
   {
-    title: "Find what is holding AI back",
+    title: "Find root causes of what is holding AI back",
     body: "The diagnostic combines scores across 12 dimensions with root cause analysis to investigate why progress is stalling and identify what needs attention.",
   },
   {
@@ -9,7 +9,7 @@ const PANELS = [
   },
   {
     title: "Give teams clear improvement targets",
-    body: "Findings become targets for specific capabilities, with an agreed timeframe—for example, improving data quality to a defined level within three months.",
+    body: "Findings become targets for specific capabilities, with an agreed timeframe, for example improving data quality to a defined level within three months.",
   },
 ];
 
