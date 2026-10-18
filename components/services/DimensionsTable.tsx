@@ -18,56 +18,60 @@ export function DimensionsTable() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="overflow-hidden rounded-xl border border-outline-variant/40 bg-surface-container-lowest">
-        <table id="failure-modes" className="w-full text-left">
-          {/* Same header treatment as the homepage "What drives AI results"
-              graphic, so "dimension" has context. */}
-          <caption className="text-left px-4 sm:px-6 py-4 border-b border-outline-variant/20">
-            <span className="flex items-center gap-2">
-              <span aria-hidden="true" className="w-2 h-2 rounded-full bg-primary" />
-              <span className="font-body text-xs uppercase text-on-surface font-semibold tracking-wider">
-                What drives AI results
-              </span>
-            </span>
-          </caption>
-          <thead className="bg-surface-container-low">
-            <tr>
-              <th scope="col" className="w-[45%] px-4 sm:px-6 py-3 font-body text-xs uppercase tracking-wider text-secondary font-semibold">
-                Dimension
-              </th>
-              <th scope="col" className="px-4 sm:px-6 py-3 font-body text-xs uppercase tracking-wider text-secondary font-semibold">
-                Failure mode
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* All rows are rendered so the full table is in the page HTML.
-                On desktop the table sits beside a taller column, so all rows
-                show; below lg, non-featured rows are hidden until expanded. */}
-            {FAILURE_MODES.map(({ dimension, failureMode, featured }) => (
-              <tr
-                key={dimension.number}
-                className={`border-t border-outline-variant/40 align-top ${
-                  !expanded && !featured ? "hidden lg:table-row" : ""
-                }`}
-              >
-                <th scope="row" className="px-4 sm:px-6 py-3 font-normal">
-                  <span className="flex items-baseline gap-3">
-                    <span className="font-body text-sm font-semibold tabular-nums text-secondary">
-                      {dimension.number}
-                    </span>
-                    <span className="font-display text-sm leading-snug text-on-surface font-semibold">
-                      {dimension.name}
-                    </span>
-                  </span>
+      {/* Same label as the homepage "What drives AI results" graphic, so
+          "dimension" has context. It sits on the section background (in line
+          with the "Step 01" eyebrow) and titles the table via aria-labelledby. */}
+      <div className="flex flex-col gap-3">
+        <div className="flex items-center gap-2">
+          <span aria-hidden="true" className="w-2 h-2 rounded-full bg-primary" />
+          <span
+            id="failure-modes-title"
+            className="font-body text-xs uppercase text-on-surface font-semibold tracking-wider"
+          >
+            What drives AI results
+          </span>
+        </div>
+        <div className="overflow-hidden rounded-xl border border-outline-variant/40 bg-surface-container-lowest">
+          <table id="failure-modes" aria-labelledby="failure-modes-title" className="w-full text-left">
+            <thead className="bg-surface-container-low">
+              <tr>
+                <th scope="col" className="w-[45%] px-4 sm:px-6 py-3 font-body text-xs uppercase tracking-wider text-secondary font-semibold">
+                  Dimension
                 </th>
-                <td className="px-4 sm:px-6 py-3 font-body text-sm leading-relaxed text-on-surface-variant">
-                  {failureMode}
-                </td>
+                <th scope="col" className="px-4 sm:px-6 py-3 font-body text-xs uppercase tracking-wider text-secondary font-semibold">
+                  Failure mode
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {/* All rows are rendered so the full table is in the page HTML.
+                  On desktop the table sits beside a taller column, so all rows
+                  show; below lg, non-featured rows are hidden until expanded. */}
+              {FAILURE_MODES.map(({ dimension, failureMode, featured }) => (
+                <tr
+                  key={dimension.number}
+                  className={`border-t border-outline-variant/40 align-top ${
+                    !expanded && !featured ? "hidden lg:table-row" : ""
+                  }`}
+                >
+                  <th scope="row" className="px-4 sm:px-6 py-3 font-normal">
+                    <span className="flex items-baseline gap-3">
+                      <span className="font-body text-sm font-semibold tabular-nums text-secondary">
+                        {dimension.number}
+                      </span>
+                      <span className="font-display text-sm leading-snug text-on-surface font-semibold">
+                        {dimension.name}
+                      </span>
+                    </span>
+                  </th>
+                  <td className="px-4 sm:px-6 py-3 font-body text-sm leading-relaxed text-on-surface-variant">
+                    {failureMode}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       <button
         ref={buttonRef}
