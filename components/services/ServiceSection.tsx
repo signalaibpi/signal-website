@@ -124,7 +124,12 @@ export function Deliverables({ heading, items }: { heading: string; items: reado
   return (
     <div className="bg-primary-tint rounded-xl p-6 sm:p-8 border border-primary/15 flex flex-col gap-5">
       <h3 className="font-display text-xl text-on-surface font-bold">{heading}</h3>
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
+      {/* Column-first grid so the ordered list reads down the left column,
+          then the right; the left column takes the extra item when odd. */}
+      <ul
+        className="grid grid-cols-1 gap-y-3 md:grid-cols-2 md:grid-flow-col md:[grid-template-rows:repeat(var(--rows),auto)] md:gap-x-10"
+        style={{ "--rows": Math.ceil(items.length / 2) } as React.CSSProperties}
+      >
         {items.map((item) => (
           <li key={item} className="flex gap-3 font-body text-base leading-relaxed text-on-surface-variant">
             <CheckIcon className="w-5 h-5 mt-0.5 shrink-0 text-primary" />
