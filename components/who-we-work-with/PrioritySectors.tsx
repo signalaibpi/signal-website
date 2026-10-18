@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRightIcon } from "@/lib/icons";
+import { serviceHref } from "@/lib/services";
 import { AREA_STYLES } from "@/components/business-ai-diagnostic/dimensions-data";
 import { PRIORITY_SECTORS, type PrioritySector } from "./sectors-data";
 import { SectorPhoto, SectorTags, SubsectionLabel } from "./SectorPhoto";
@@ -66,7 +67,7 @@ function Sector({ sector, band }: { sector: PrioritySector; band: string }) {
               </ul>
               <Link
                 className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
-                href="/services#ai-progress-review"
+                href={serviceHref("AI Progress Review")}
               >
                 <span>Explore AI Progress Review</span>
                 <ArrowRightIcon className="w-4 h-4" />

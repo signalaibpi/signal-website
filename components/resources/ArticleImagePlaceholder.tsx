@@ -1,12 +1,14 @@
 export function ArticleImagePlaceholder({
   className = "",
+  label = "Image placeholder for this article",
 }: {
   className?: string;
+  label?: string;
 }) {
   return (
     <div
       role="img"
-      aria-label="Image placeholder for this article"
+      aria-label={label}
       className={`relative flex items-center justify-center overflow-hidden rounded-xl border border-outline-variant/50 bg-surface-container ${className}`}
     >
       <div

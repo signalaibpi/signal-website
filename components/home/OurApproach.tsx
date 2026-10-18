@@ -12,13 +12,13 @@ const MODULES = [
   {
     label: "Step 02",
     title: "AI Planning",
-    href: serviceHref("Frontline AI Planning"),
+    href: serviceHref("AI Planning"),
     body: "Helps teams translate agreed priorities into practical plans with clear targets, ownership and resources.",
   },
   {
     label: "Step 03",
     title: "AI Delivery",
-    href: serviceHref("Frontline AI Delivery"),
+    href: serviceHref("AI Delivery"),
     body: "Helps teams deliver improvements while building their ability to continue independently.",
   },
 ];

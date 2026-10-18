@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { SERVICES_HREF } from "@/lib/services";
 
 const MENU_LINKS = [
-  { label: "Our Services", href: "/services" },
+  { label: "Our Services", href: SERVICES_HREF },
   { label: "Who we work with", href: "/who-we-help" },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "#" },
