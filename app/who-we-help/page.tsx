@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Hero } from "@/components/who-we-help/Hero";
-import { PrioritySectors } from "@/components/who-we-help/PrioritySectors";
-import { SecondarySectors } from "@/components/who-we-help/SecondarySectors";
+import { Hero } from "@/components/who-we-work-with/Hero";
+import { PrioritySectors } from "@/components/who-we-work-with/PrioritySectors";
+import { SecondarySectors } from "@/components/who-we-work-with/SecondarySectors";
 import { FinalCta } from "@/components/home/FinalCta";
 
 export const metadata: Metadata = {

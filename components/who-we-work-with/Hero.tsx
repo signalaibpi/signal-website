@@ -12,11 +12,11 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 flex flex-col gap-6 pt-2">
             <h1 className="font-display text-[36px] leading-[44px] sm:text-[56px] sm:leading-[64px] tracking-[-0.03em] text-on-surface font-bold">
-              Who we help
+              Who we work with
             </h1>
             <p className="font-body text-lg sm:text-xl leading-relaxed text-on-surface-variant max-w-xl">
-              Signal&rsquo;s primary focus is helping fintechs, business
-              software companies and business process outsourcers turn AI
+              Signal&rsquo;s primary focus is helping fintechs, software 
+              companies and outsourcers turn AI
               investment into measurable operational results.
             </p>
             <p className="font-body text-base leading-relaxed text-secondary max-w-xl">
