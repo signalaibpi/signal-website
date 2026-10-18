@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section className="w-full bg-surface-container-lowest border-b border-outline-variant/20">
@@ -29,8 +31,16 @@ export function Hero() {
             </a>
           </div>
           <div className="lg:col-span-6">
-            <div className="w-full aspect-[4/3] rounded-xl border border-dashed border-outline-variant bg-surface-container-low flex items-center justify-center">
-              <span className="font-body text-sm text-secondary">Hero image placeholder</span>
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/40">
+              <Image
+                src="/home-hero.png"
+                alt="A professional seen from behind looking towards a sunlit city horizon from a broad walkway"
+                fill
+                sizes="(min-width: 1280px) 544px, (min-width: 1024px) calc(50vw - 96px), (min-width: 768px) calc(100vw - 80px), calc(100vw - 40px)"
+                className="object-cover"
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
           </div>
         </div>
