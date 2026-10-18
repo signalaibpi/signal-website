@@ -19,7 +19,7 @@ export function OurMethodology() {
             </p>
             <a
               className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
-              href="#"
+              href="/business-ai-dashboard"
             >
               <span>Explore the Business AI Diagnostic</span>
               <ArrowRightIcon className="w-4 h-4" />

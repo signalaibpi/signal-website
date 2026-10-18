@@ -1,8 +1,7 @@
-// Signal's three services, in the order they appear in the header's
-// "Our Approach" drop-down and the homepage Our approach section. Planning and
-// Delivery point to "#" until their pages are built.
+// Signal's three homepage service links. Planning and Delivery point to "#"
+// until their pages are built.
 export const SERVICE_LINKS = [
-  { label: "AI Progress Review", href: "/ai-progress-review" },
+  { label: "AI Progress Review", href: "/services#ai-progress-review" },
   { label: "Frontline AI Planning", href: "#" },
   { label: "Frontline AI Delivery", href: "#" },
 ];

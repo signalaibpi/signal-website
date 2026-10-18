@@ -66,9 +66,9 @@ function Sector({ sector, band }: { sector: PrioritySector; band: string }) {
               </ul>
               <Link
                 className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
-                href="/ai-progress-review"
+                href="/services#ai-progress-review"
               >
-                <span>Explore the diagnostic dimensions</span>
+                <span>Explore AI Progress Review</span>
                 <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>

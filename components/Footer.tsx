@@ -1,22 +1,17 @@
 const MENU_LINKS = [
-  { label: "Homepage", href: "#" },
-  { label: "AI Progress Review", href: "/ai-progress-review" },
-  { label: "Who we help", href: "/who-we-help" },
-  { label: "Pricing", href: "#" },
+  { label: "Homepage", href: "/" },
+  { label: "Our Services", href: "/services" },
+  { label: "Who we work with", href: "/who-we-help" },
   { label: "Resources", href: "#" },
   { label: "About", href: "#" },
 ];
 
 const RESOURCE_LINKS = [
+  { label: "Business AI Diagnostic", href: "/business-ai-dashboard" },
   { label: "Sample Business AI Diagnostic", href: "#" },
-  { label: "LinkedIn", href: "#" },
 ];
 
-const LEGAL_LINKS = [
-  { label: "Privacy", href: "#" },
-  { label: "Platform T&Cs", href: "#" },
-  { label: "Contact us", href: "#" },
-];
+const CONTACT_LINKS = [{ label: "Contact us", href: "#" }];
 
 function FooterColumn({
   heading,
@@ -64,7 +59,7 @@ export function Footer() {
           </div>
           <FooterColumn heading="Menu" links={MENU_LINKS} />
           <FooterColumn heading="Resources" links={RESOURCE_LINKS} />
-          <FooterColumn heading="Legal" links={LEGAL_LINKS} />
+          <FooterColumn heading="Contact" links={CONTACT_LINKS} />
         </div>
         <div className="pt-6">
           <span className="font-body text-sm text-on-surface-variant">
