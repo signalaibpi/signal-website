@@ -44,17 +44,17 @@ export function DimensionsTable() {
                   !expanded && !featured ? "hidden lg:table-row" : ""
                 }`}
               >
-                <th scope="row" className="px-4 sm:px-6 py-4 font-normal">
+                <th scope="row" className="px-4 sm:px-6 py-3 font-normal">
                   <span className="flex items-baseline gap-3">
                     <span className="font-body text-sm font-semibold tabular-nums text-secondary">
                       {dimension.number}
                     </span>
-                    <span className="font-display text-base text-on-surface font-bold">
+                    <span className="font-display text-sm leading-snug text-on-surface font-semibold">
                       {dimension.name}
                     </span>
                   </span>
                 </th>
-                <td className="px-4 sm:px-6 py-4 font-body text-base leading-relaxed text-on-surface-variant">
+                <td className="px-4 sm:px-6 py-3 font-body text-sm leading-relaxed text-on-surface-variant">
                   {failureMode}
                 </td>
               </tr>
