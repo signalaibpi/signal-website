@@ -18,9 +18,10 @@ export function DimensionsTable() {
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Same label as the homepage "What drives AI results" graphic, so
-          "dimension" has context. It sits on the section background (in line
-          with the "Step 01" eyebrow) and titles the table via aria-labelledby. */}
+      {/* Styled like the homepage "What drives AI results" label, but worded
+          for failure modes; it echoes the section intro ("what is holding back
+          AI adoption"). It sits on the section background (in line with the
+          "Step 01" eyebrow) and titles the table via aria-labelledby. */}
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-2">
           <span aria-hidden="true" className="w-2 h-2 rounded-full bg-primary" />
@@ -28,7 +29,7 @@ export function DimensionsTable() {
             id="failure-modes-title"
             className="font-body text-xs uppercase text-on-surface font-semibold tracking-wider"
           >
-            What drives AI results
+            What holds AI results back
           </span>
         </div>
         <div className="overflow-hidden rounded-xl border border-outline-variant/40 bg-surface-container-lowest">
