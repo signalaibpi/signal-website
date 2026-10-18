@@ -9,17 +9,20 @@ export function DimensionsGrid() {
         <div className="max-w-3xl flex flex-col gap-4">
           <SectionEyebrow>The 12 diagnostic dimensions</SectionEyebrow>
           <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-            The Business AI Diagnostic scores organisations on 12 dimensions.
+            Three areas. Twelve dimensions. One evidence-based view.
           </h2>
           <p className="font-body text-lg leading-relaxed text-on-surface-variant">
-            These 12 cover the most important success factors and failure
-            modes of AI transformations. They were chosen based on our
-            founder&rsquo;s deep experience and extensive research.
+            The Diagnostic assesses the organisational skills to implement
+            AI, get the most from it in day-to-day work, and keep it under
+            effective control. It applies to generative AI, whether built
+            in-house, commissioned or bought from a vendor.
           </p>
           <p className="font-body text-base leading-relaxed text-secondary">
-            The dimensions measure symptoms observed by frontline teams and
-            senior management. Root causes, including technical ones, will
-            surface in the root cause analysis.
+            Scores reflect evidence of maturity and results. Where an AI
+            application is not live, readiness is assessed instead. Each
+            dimension also includes a quality indicator to show when design,
+            coverage or judgement is stronger or weaker than its process
+            score suggests.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

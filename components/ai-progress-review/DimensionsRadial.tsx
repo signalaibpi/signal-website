@@ -4,18 +4,16 @@ import { DIMENSIONS, type Area } from "./dimensions-data";
 // tokens in globals.css) so all 12 wedges stay distinguishable at a glance.
 // Not reusable tokens — deliberately a single-use blend for this graphic.
 const WEDGE_FILL: Record<Area, string> = {
-  Strategy: "#94aeea",
-  Operation: "#a6abb5",
-  Implementation: "#8fb3c6",
+  Operation: "#94aeea",
+  Implementation: "#a6abb5",
   Governance: "#b8a9e3",
 };
 
 // Deep accent (numbers, ticks) reads from the real tokens via CSS var so it
 // tracks any future palette change.
 const WEDGE_ACCENT: Record<Area, string> = {
-  Strategy: "var(--color-area-strategy)",
-  Operation: "var(--color-area-operation)",
-  Implementation: "var(--color-area-implementation)",
+  Operation: "var(--color-area-strategy)",
+  Implementation: "var(--color-area-operation)",
   Governance: "var(--color-area-governance)",
 };
 
@@ -113,7 +111,7 @@ export function DimensionsRadial() {
       viewBox={`0 0 ${SIZE} ${SIZE}`}
       className="w-full h-auto max-w-[640px]"
       role="img"
-      aria-label="Radial diagram of the 12 Business AI Diagnostic dimensions, grouped and colour-coded by area: Strategy, Operation, Implementation and Governance"
+      aria-label="Radial diagram of the 12 Business AI Diagnostic dimensions, grouped and colour-coded by area: Operation, Implementation and Governance"
     >
       <title>The 12 Business AI Diagnostic dimensions</title>
       {DIMENSIONS.map((dim, i) => {

@@ -56,11 +56,11 @@ export const PRIORITY_SECTORS: PrioritySector[] = [
         "Allowing responsibility for AI-assisted customer or operational decisions to sit between product, operations, risk and technology, without a named owner able to control performance.",
       ),
       barrier(
-        "Policy and Control Assurance",
+        "Policy & Risk Management",
         "Establishing rules for sensitive data and higher-risk uses without reliable evidence that live AI workflows follow those rules and required controls work.",
       ),
       barrier(
-        "Output Quality Assurance",
+        "Output Quality Control",
         "Releasing AI-assisted communications or reviews without defined quality standards and testing that reflects real customers, exceptions and financial contexts.",
       ),
     ],
@@ -93,8 +93,8 @@ export const PRIORITY_SECTORS: PrioritySector[] = [
     ],
     barriers: [
       barrier(
-        "AI Strategy",
-        "Funding disconnected support and customer-success initiatives without prioritising the applications most likely to improve adoption, retention or expansion.",
+        "AI Success Tracking",
+        "Running onboarding and customer-success AI without agreed targets to show whether adoption, retention or expansion is improving.",
       ),
       barrier(
         "Data & Process Integration",
@@ -133,8 +133,8 @@ export const PRIORITY_SECTORS: PrioritySector[] = [
     ],
     barriers: [
       barrier(
-        "AI Strategy",
-        "Investing in visible automation without establishing which customer-service, document-processing or back-office workflows offer the greatest commercial value.",
+        "AI Success Tracking",
+        "Introducing customer-service, document-processing or back-office AI without team-owned targets to track service quality, capacity or contract margin.",
       ),
       barrier(
         "Workforce AI Willingness",

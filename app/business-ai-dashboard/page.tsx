@@ -6,7 +6,7 @@ import { DimensionsGrid } from "@/components/ai-progress-review/DimensionsGrid";
 export const metadata: Metadata = {
   title: "Business AI Diagnostic — Signal",
   description:
-    "The Business AI Diagnostic builds an evidence-based assessment of your organisation's AI progress, identifies what is holding it back most and sets clear priorities for improvement.",
+    "An evidence-based assessment of how your organisation implements, operates and governs generative AI, with clear priorities for improvement.",
 };
 
 export default function BusinessAiDashboardPage() {
