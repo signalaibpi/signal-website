@@ -34,13 +34,15 @@ export function DimensionsTable() {
             </tr>
           </thead>
           <tbody>
-            {/* All rows are rendered so the full table is in the page HTML;
-                non-featured rows are hidden until expanded. */}
+            {/* All rows are rendered so the full table is in the page HTML.
+                On desktop the table sits beside a taller column, so all rows
+                show; below lg, non-featured rows are hidden until expanded. */}
             {FAILURE_MODES.map(({ dimension, failureMode, featured }) => (
               <tr
                 key={dimension.number}
-                hidden={!expanded && !featured}
-                className="border-t border-outline-variant/40 align-top"
+                className={`border-t border-outline-variant/40 align-top ${
+                  !expanded && !featured ? "hidden lg:table-row" : ""
+                }`}
               >
                 <th scope="row" className="px-4 sm:px-6 py-4 font-normal">
                   <span className="flex items-baseline gap-3">
@@ -66,7 +68,7 @@ export function DimensionsTable() {
         aria-expanded={expanded}
         aria-controls="failure-modes"
         onClick={toggle}
-        className="self-start inline-flex items-center justify-center rounded-lg bg-surface-container-lowest border border-outline-variant/40 px-5 py-3 font-display text-sm text-on-surface font-semibold hover:bg-surface-container transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        className="lg:hidden self-start inline-flex items-center justify-center rounded-lg bg-surface-container-lowest border border-outline-variant/40 px-5 py-3 font-display text-sm text-on-surface font-semibold hover:bg-surface-container transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         {expanded ? "Show fewer" : `Show all ${FAILURE_MODES.length} dimensions`}
       </button>
