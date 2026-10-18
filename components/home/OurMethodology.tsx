@@ -10,12 +10,12 @@ export function OurMethodology() {
           <div className="flex flex-col gap-6">
             <SectionEyebrow>Our methodology</SectionEyebrow>
             <h2 className="font-display text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] tracking-[-0.02em] text-on-surface font-semibold">
-              Identify root causes and set clear priorities.
+              When AI falls short, there’s rarely just one reason.
             </h2>
             <p className="font-body text-lg leading-relaxed text-on-surface-variant">
-              Signal&rsquo;s Business AI Diagnostic is a comprehensive, evidence-led methodology for identifying root causes
-              of disappointing AI adoption and business results. The findings provide the basis for agreeing
-              priorities and improvement targets.
+              Signal&rsquo;s Business AI Diagnostic is a comprehensive, evidence-led methodology for identifying all root
+              causes of disappointing AI adoption and business results. The findings provide the basis for agreeing
+              priorities and setting improvement targets.
             </p>
             <a
               className="inline-flex items-center gap-2 font-display text-sm font-bold text-primary hover:text-primary-hover transition-colors w-fit"
