@@ -1,4 +1,4 @@
-import { DIMENSIONS, type Dimension } from "@/components/ai-progress-review/dimensions-data";
+import { DIMENSIONS, type Dimension } from "@/components/business-ai-diagnostic/dimensions-data";
 
 export type SectorImage = { src: string; alt: string };
 

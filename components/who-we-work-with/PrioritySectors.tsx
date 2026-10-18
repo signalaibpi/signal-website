@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRightIcon } from "@/lib/icons";
-import { AREA_STYLES } from "@/components/ai-progress-review/dimensions-data";
+import { AREA_STYLES } from "@/components/business-ai-diagnostic/dimensions-data";
 import { PRIORITY_SECTORS, type PrioritySector } from "./sectors-data";
 import { SectorPhoto, SectorTags, SubsectionLabel } from "./SectorPhoto";
 

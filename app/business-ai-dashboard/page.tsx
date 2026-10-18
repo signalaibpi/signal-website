@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Hero } from "@/components/ai-progress-review/Hero";
-import { WhyItApplies } from "@/components/ai-progress-review/WhyItApplies";
-import { DimensionsGrid } from "@/components/ai-progress-review/DimensionsGrid";
+import { Hero } from "@/components/business-ai-diagnostic/Hero";
+import { WhyItApplies } from "@/components/business-ai-diagnostic/WhyItApplies";
+import { DimensionsGrid } from "@/components/business-ai-diagnostic/DimensionsGrid";
 
 export const metadata: Metadata = {
   title: "Business AI Diagnostic — Signal",
