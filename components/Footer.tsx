@@ -1,5 +1,6 @@
+import Link from "next/link";
+
 const MENU_LINKS = [
-  { label: "Homepage", href: "/" },
   { label: "Our Services", href: "/services" },
   { label: "Who we work with", href: "/who-we-help" },
   { label: "Resources", href: "#" },
@@ -47,12 +48,12 @@ export function Footer() {
       <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-16 pt-16 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-10 border-b border-outline-variant/20">
           <div className="lg:col-span-2 flex flex-col gap-3">
-            <div className="flex items-center gap-1.5">
+            <Link className="flex items-center gap-1.5 w-fit rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="/" aria-label="Signal homepage">
               <span className="font-display text-[22px] font-bold tracking-tight text-on-surface">
                 Signal
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
-            </div>
+            </Link>
             <p className="font-body text-sm text-on-surface-variant max-w-sm">
               AI Business Process Improvement
             </p>
