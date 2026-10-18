@@ -1,11 +1,11 @@
 const PANELS = [
   {
-    title: "Prioritise with a realistic view of readiness",
-    body: "Many dimensions can be assessed before an AI application is built. Checking data, integration and workforce readiness helps leaders judge which initiatives are ready to proceed and which need groundwork first.",
-  },
-  {
     title: "Find what is holding AI back",
     body: "The diagnostic combines scores across 12 dimensions with root cause analysis to investigate why progress is stalling and identify what needs attention.",
+  },
+  {
+    title: "Prioritise with a realistic view of readiness",
+    body: "Many dimensions can be assessed before an AI application is built. Checking data, integration and workforce readiness helps leaders judge which initiatives are ready to proceed and which need groundwork first.",
   },
   {
     title: "Give teams clear improvement targets",
