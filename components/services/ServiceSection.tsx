@@ -79,11 +79,11 @@ function Label({ as: Tag, children }: { as: "h3" | "h4"; children: React.ReactNo
   );
 }
 
-function Bullets({ items }: { items: readonly string[] }) {
+function Bullets({ items }: { items: readonly React.ReactNode[] }) {
   return (
     <ul className="flex flex-col gap-3">
-      {items.map((item) => (
-        <li key={item} className="flex gap-3 font-body text-base leading-relaxed text-on-surface-variant">
+      {items.map((item, i) => (
+        <li key={i} className="flex gap-3 font-body text-base leading-relaxed text-on-surface-variant">
           <span aria-hidden="true" className="mt-[0.6em] w-1.5 h-1.5 shrink-0 rounded-full bg-primary" />
           <span>{item}</span>
         </li>
@@ -92,27 +92,43 @@ function Bullets({ items }: { items: readonly string[] }) {
   );
 }
 
+// A neutral card ending in a "What Signal brings to this service" list. The
+// list's label is an h4 under a titled card, or an h3 when the card has no
+// title of its own and the list applies to the whole service.
+export function FocusCard({
+  children,
+  brings,
+  bringsHeadingLevel = "h4",
+}: {
+  children: React.ReactNode;
+  brings?: readonly React.ReactNode[];
+  bringsHeadingLevel?: "h3" | "h4";
+}) {
+  return (
+    <div className="bg-surface-container-low rounded-xl p-6 sm:p-8 border border-outline-variant/40 flex flex-col gap-4">
+      {children}
+      {brings && (
+        <div className="flex flex-col gap-3 pt-4 mt-auto border-t border-outline-variant/40">
+          <Label as={bringsHeadingLevel}>What Signal brings to this service</Label>
+          <Bullets items={brings} />
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function FocusAreas({ areas }: { areas: FocusArea[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {areas.map((area) => (
-        <div
-          key={area.title}
-          className="bg-surface-container-low rounded-xl p-6 sm:p-8 border border-outline-variant/40 flex flex-col gap-4"
-        >
+        <FocusCard key={area.title} brings={area.brings}>
           <h3 className="font-display text-xl text-on-surface font-bold">{area.title}</h3>
           {area.body.map((paragraph) => (
             <p key={paragraph} className="font-body text-base leading-relaxed text-on-surface-variant">
               {paragraph}
             </p>
           ))}
-          {area.brings && (
-            <div className="flex flex-col gap-3 pt-4 mt-auto border-t border-outline-variant/40">
-              <Label as="h4">What Signal brings to this service</Label>
-              <Bullets items={area.brings} />
-            </div>
-          )}
-        </div>
+        </FocusCard>
       ))}
     </div>
   );
