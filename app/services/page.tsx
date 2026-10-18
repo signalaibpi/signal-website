@@ -44,28 +44,30 @@ export default function ServicesPage() {
             .
           </>
         }
+        introDetail={
+          <div className="flex flex-col gap-8">
+            {PROGRESS_REVIEW_STEPS.map((step) => (
+              <div key={step.title} className="flex flex-col gap-2">
+                <h3 className="font-display text-xl text-on-surface font-bold">{step.title}</h3>
+                <p className="font-body text-base leading-relaxed text-on-surface-variant">
+                  {step.body}
+                  {"footnote" in step && (
+                    <a
+                      href="#planning-cycle-note"
+                      aria-label="See note on the planning cycle"
+                      className="text-primary hover:text-primary-hover"
+                    >
+                      *
+                    </a>
+                  )}
+                  .
+                </p>
+              </div>
+            ))}
+          </div>
+        }
+        aside={<DimensionsTable />}
       >
-        <DimensionsTable />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PROGRESS_REVIEW_STEPS.map((step) => (
-            <div key={step.title} className="flex flex-col gap-2">
-              <h3 className="font-display text-xl text-on-surface font-bold">{step.title}</h3>
-              <p className="font-body text-base leading-relaxed text-on-surface-variant">
-                {step.body}
-                {"footnote" in step && (
-                  <a
-                    href="#planning-cycle-note"
-                    aria-label="See note on the planning cycle"
-                    className="text-primary hover:text-primary-hover"
-                  >
-                    *
-                  </a>
-                )}
-                .
-              </p>
-            </div>
-          ))}
-        </div>
         <Deliverables heading="AI Progress Review deliverables" items={PROGRESS_REVIEW_DELIVERABLES} />
         <p id="planning-cycle-note" className="font-body text-sm text-secondary">
           *The planning cycle is typically 3 months.
