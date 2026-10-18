@@ -62,7 +62,7 @@ export const PROGRESS_REVIEW_STEPS = [
     body: "Signal identifies root causes for low AI adoption and disappointing business results across implementation, operation and governance",
   },
   {
-    title: "Identifies priorities",
+    title: "Set priorities",
     body: "Working closely with your leadership team, Signal agrees measurable, realistic priorities for the next planning cycle",
     // Links to the planning-cycle footnote under this section.
     footnote: true,
