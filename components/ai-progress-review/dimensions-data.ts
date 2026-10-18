@@ -22,18 +22,20 @@ export type Dimension = {
 };
 
 // Dimension names, areas and weights follow the current diagnostic source.
-// Summaries and prompts are concise public-facing explanations of its scope.
+// Original website copy is retained for dimensions that were already present;
+// newly introduced or renamed dimensions use concise copy for their current scope.
 export const DIMENSIONS: Dimension[] = [
   {
     number: "01",
     name: "Workforce AI Willingness",
     area: "Operation",
     weight: 4,
-    summary: "Measures whether employees use AI and contribute to improving it.",
+    summary: "Measures whether frontline employees are willing and incentivised to use and improve AI.",
     questions: [
-      "Of the people intended to use AI, how many actually do?",
-      "Do employees proactively suggest improvements?",
-      "Do employees understand the AI strategy and feel their feedback is heard?",
+      "Of the people meant to be using our AI, how many actually are?",
+      "Are employees proactively improving AI, or just using what they're given?",
+      "Do employees benefit from using AI? Or will it simply lead to increased targets?",
+      "When staff raise concerns about AI, does anyone respond?",
     ],
   },
   {
@@ -41,12 +43,12 @@ export const DIMENSIONS: Dimension[] = [
     name: "Workforce AI Capability",
     area: "Operation",
     weight: 4,
-    summary: "Measures whether frontline teams can use, tune and implement AI applications.",
+    summary: "Measures whether frontline teams are effective at using and improving AI.",
     questions: [
-      "Can employees use AI applications competently?",
-      "Do frontline teams have capacity to tune their AI applications?",
-      "Can frontline teams implement applications they use?",
-      "Is the knowledge behind applications documented beyond one person?",
+      "Can they effectively oversee AI and spot when AI output is wrong?",
+      "Do staff know what data they can and can't put into the AI?",
+      "Can frontline teams adjust their AI quickly, or are they held up in a central queue?",
+      "If one key person left, would we still know how our AI was set up?",
     ],
   },
   {
@@ -66,11 +68,12 @@ export const DIMENSIONS: Dimension[] = [
     name: "Work Redesign",
     area: "Operation",
     weight: 3,
-    summary: "Measures whether work is divided appropriately between AI, people and software.",
+    summary: "Measures whether the right tasks are being given to AI.",
     questions: [
-      "Has work been redesigned around AI, or added to existing processes?",
-      "Is each task assigned to AI, a person or software based on what works best?",
-      "Is that division of work revisited as AI capabilities change?",
+      "Have we redesigned the work around AI, or just dropped AI into the old process?",
+      "Is each task going to whoever does it best: AI, a person, or plain software?",
+      "Do we recognise where AI is not the right tool for a task?",
+      "As AI gets better, do we move more work to it, or leave the split as it was?",
     ],
   },
   {
@@ -78,11 +81,12 @@ export const DIMENSIONS: Dimension[] = [
     name: "Data Quality",
     area: "Implementation",
     weight: 4,
-    summary: "Measures whether data and knowledge are reliable enough for AI to produce useful results.",
+    summary: "Measures whether your data is good enough for AI to produce results you can trust.",
     questions: [
-      "Is the information AI relies on current and sufficiently complete?",
-      "Are important contradictions or gaps in data identified?",
-      "Is the knowledge AI needs documented and maintained?",
+      "Have we documented know-how and constraints sufficiently for AI to perform well?",
+      "Is our AI working from current data, or acting on information that's out of date?",
+      "When two systems disagree, does the AI notice, or just silently pick one?",
+      "Are we fixing the data that matters most, or just the data that's easiest to fix?",
     ],
   },
   {
@@ -102,11 +106,12 @@ export const DIMENSIONS: Dimension[] = [
     name: "Iteration Velocity",
     area: "Implementation",
     weight: 3,
-    summary: "Measures whether AI applications can be improved quickly while maintaining quality.",
+    summary: "Measures if the organisation is improving its AI applications fast enough to maintain organisational momentum and keep up with external developments.",
     questions: [
-      "How quickly can an approved change be delivered?",
-      "Are improvements keeping pace with employee and customer needs?",
-      "Does faster delivery preserve appropriate checks?",
+      "How long does it take to get an approved AI change live: months, weeks, or days?",
+      "Are we shipping improvements fast enough to meet employee and client needs?",
+      "Are we keeping pace with better and cheaper models as they arrive?",
+      "Is faster delivery real efficiency, or are we skipping checks to get there?",
     ],
   },
   {
@@ -114,11 +119,11 @@ export const DIMENSIONS: Dimension[] = [
     name: "Data & Process Integration",
     area: "Implementation",
     weight: 3,
-    summary: "Measures whether data and work flow into and out of AI without unnecessary manual handoffs.",
+    summary: "Measures whether AI is integrated into workflows well enough to run at scale.",
     questions: [
-      "Can AI access the data it needs without repeated manual input?",
-      "Does work reach AI through the workflow without manual forwarding?",
-      "Do AI results flow into the systems where work continues?",
+      "Can the AI get data by itself, or does someone have to manually feed it every time?",
+      "Does work reach the AI automatically, or is someone still forwarding and uploading it?",
+      "Do the AI's results flow straight into our systems, or get keyed in again by hand?",
     ],
   },
   {
@@ -126,11 +131,12 @@ export const DIMENSIONS: Dimension[] = [
     name: "Quality at the Right Cost",
     area: "Implementation",
     weight: 2,
-    summary: "Measures whether AI achieves the required performance at the lowest practical cost.",
+    summary: "Measures whether we get the AI performance we need at the lowest possible cost",
     questions: [
-      "Do we understand what AI use cases cost to run?",
-      "Are we using more AI capability than a task requires?",
-      "Can costs be reduced without compromising required quality?",
+      "Do we know what each of our AI use cases actually costs to run?",
+      "Are we paying for more AI than the task really needs?",
+      "When a cheaper option appears that's just as good, how quickly do we switch to it?",
+      "Are we cutting costs without cutting the quality we need?",
     ],
   },
   {
@@ -138,11 +144,12 @@ export const DIMENSIONS: Dimension[] = [
     name: "Human Accountability",
     area: "Governance",
     weight: 4,
-    summary: "Measures whether people have clear responsibility and authority for AI outcomes.",
+    summary: "Measures whether accountability for AI outputs is clear and effective.",
     questions: [
-      "Is responsibility for AI outputs clear?",
-      "Can responsible people review, override or stop AI when needed?",
-      "Is oversight proportionate to risk and effective in practice?",
+      "Does every AI output have a single named owner responsible for its quality?",
+      "Do those owners have real ways to review, override or stop the AI?",
+      "Do owners accept accountability, or say mistakes were out of their control?",
+      "Is oversight proportionate to the risk, or has it become an approval bottleneck?",
     ],
   },
   {
