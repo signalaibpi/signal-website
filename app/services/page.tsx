@@ -31,53 +31,53 @@ export default function ServicesPage() {
         band="bg-surface"
         intro="Helps organisations identify what is holding back AI adoption and business results, then agree priorities for improvement."
         introDetail={
-          <FocusCard
-            bringsHeadingLevel="h3"
-            brings={[
-              <>
-                Signal&rsquo;s{" "}
-                <Link
-                  href="/business-ai-dashboard"
-                  className="text-primary hover:text-primary-hover underline underline-offset-4 decoration-primary/40 transition-colors"
-                >
-                  Business AI Diagnostic methodology and platform
-                </Link>{" "}
-                efficiently collect the required evidence for a wide range of
-                potential root causes
-              </>,
-              "The Signal founder has a combination of AI expertise, strategic perspective and operating experience to identify root causes and help set priorities",
-            ]}
-          >
-            <div className="flex flex-col gap-6">
-              {PROGRESS_REVIEW_STEPS.map((step) => (
-                <div key={step.title} className="flex flex-col gap-2">
-                  <h3 className="font-display text-lg text-on-surface font-bold">{step.title}</h3>
-                  <p className="font-body text-base leading-relaxed text-on-surface-variant">
-                    {step.body}
-                    {"footnote" in step && (
-                      <a
-                        href="#planning-cycle-note"
-                        aria-label="See note on the planning cycle"
-                        className="text-primary hover:text-primary-hover"
-                      >
-                        *
-                      </a>
-                    )}
-                    .
-                  </p>
-                </div>
-              ))}
-            </div>
-          </FocusCard>
+          <div className="flex flex-col gap-3">
+            <FocusCard
+              bringsHeadingLevel="h3"
+              brings={[
+                <>
+                  Signal&rsquo;s{" "}
+                  <Link
+                    href="/business-ai-dashboard"
+                    className="text-primary hover:text-primary-hover underline underline-offset-4 decoration-primary/40 transition-colors"
+                  >
+                    Business AI Diagnostic methodology and platform
+                  </Link>{" "}
+                  efficiently collect the required evidence for a wide range of
+                  potential root causes
+                </>,
+                "The Signal founder has a combination of AI expertise, strategic perspective and operating experience to identify root causes and help set priorities",
+              ]}
+            >
+              <div className="flex flex-col gap-6">
+                {PROGRESS_REVIEW_STEPS.map((step) => (
+                  <div key={step.title} className="flex flex-col gap-2">
+                    <h3 className="font-display text-lg text-on-surface font-bold">{step.title}</h3>
+                    <p className="font-body text-base leading-relaxed text-on-surface-variant">
+                      {step.body}
+                      {"footnote" in step && (
+                        <a
+                          href="#planning-cycle-note"
+                          aria-label="See note on the planning cycle"
+                          className="text-primary hover:text-primary-hover"
+                        >
+                          *
+                        </a>
+                      )}
+                      .
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </FocusCard>
+            <p id="planning-cycle-note" className="font-body text-sm text-secondary scroll-mt-28">
+              *The planning cycle is typically 3 months.
+            </p>
+          </div>
         }
         aside={<DimensionsTable />}
       >
-        <div className="flex flex-col gap-4">
-          <Deliverables heading="AI Progress Review deliverables" items={PROGRESS_REVIEW_DELIVERABLES} />
-          <p id="planning-cycle-note" className="font-body text-sm text-secondary scroll-mt-28">
-            *The planning cycle is typically 3 months.
-          </p>
-        </div>
+        <Deliverables heading="AI Progress Review deliverables" items={PROGRESS_REVIEW_DELIVERABLES} />
       </ServiceSection>
 
       <ServiceSection
