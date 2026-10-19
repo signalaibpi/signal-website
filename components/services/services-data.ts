@@ -112,9 +112,9 @@ export const PLANNING_AREAS: FocusArea[] = [
     ],
   },
   {
-    title: "Quality ownership",
+    title: "Quality control",
     body: [
-      "Signal works with teams to review AI governance and quality control processes and suggest improvements so teams can test, review and evidence AI outputs appropriately.",
+      "Signal works with teams to review AI governance requirements and quality control processes and suggest improvements so teams can test, review and evidence AI outputs appropriately.",
     ],
     brings: [
       "The Signal founder has 15+ years of experience managing compliance-heavy financial services teams",
@@ -148,7 +148,7 @@ export const DELIVERY_AREAS: FocusArea[] = [
     ],
   },
   {
-    title: "Quality process implementation",
+    title: "Quality control implementation",
     body: [
       "Signal’s Embedded AI Product Managers help teams implement AI policy and agreed quality tools and processes.",
     ],
