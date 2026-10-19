@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/services/Hero";
+import { ImageBand } from "@/components/services/ImageBand";
 import { DimensionsTable } from "@/components/services/DimensionsTable";
 import { Deliverables, FocusCard, ServiceSection } from "@/components/services/ServiceSection";
 import {
@@ -90,6 +91,8 @@ export default function ServicesPage() {
       >
         <Deliverables heading="AI Planning deliverables" items={PLANNING_DELIVERABLES} />
       </ServiceSection>
+
+      <ImageBand label="Image placeholder: an Embedded AI Product Manager working alongside a team" />
 
       <ServiceSection
         id="ai-delivery"
