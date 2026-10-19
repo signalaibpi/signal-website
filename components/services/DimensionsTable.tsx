@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { DotLabel } from "./NumberedLinks";
 import { FAILURE_MODES } from "./services-data";
 
 export function DimensionsTable() {
@@ -23,15 +24,7 @@ export function DimensionsTable() {
           AI adoption"). It sits on the section background (in line with the
           "Step 01" eyebrow) and titles the table via aria-labelledby. */}
       <div className="flex flex-col gap-3">
-        <div className="flex items-center gap-2">
-          <span aria-hidden="true" className="w-2 h-2 rounded-full bg-primary" />
-          <span
-            id="failure-modes-title"
-            className="font-body text-xs uppercase text-on-surface font-semibold tracking-wider"
-          >
-            What holds AI results back
-          </span>
-        </div>
+        <DotLabel id="failure-modes-title">What holds AI results back</DotLabel>
         <div className="overflow-hidden rounded-xl border border-outline-variant/40 bg-surface-container-lowest">
           <table id="failure-modes" aria-labelledby="failure-modes-title" className="w-full text-left">
             <thead className="bg-surface-container-low">

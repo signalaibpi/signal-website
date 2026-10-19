@@ -1,10 +1,29 @@
-import { ArticleImagePlaceholder } from "@/components/resources/ArticleImagePlaceholder";
 import { CheckIcon } from "@/lib/icons";
+import { DotLabel, LinkName, NumberedLinkList } from "./NumberedLinks";
 import type { FocusArea } from "./services-data";
 
-// The right column holds either an image placeholder (withImage) or a
-// section-specific visual (aside). An aside gets equal columns and top
-// alignment, since it may change height (e.g. an expandable table).
+type AnchoredArea = FocusArea & { anchor: string };
+
+// Gives each focus-area card an anchor for the section overview to link to.
+// A duplicate (e.g. two titles differing only in punctuation) fails the build
+// rather than leaving an overview link pointing at the wrong card.
+function withAnchors(sectionId: string, areas: FocusArea[]): AnchoredArea[] {
+  const anchored = areas.map((area) => ({
+    ...area,
+    anchor: `${sectionId}-${area.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
+  }));
+  const anchors = anchored.map((area) => area.anchor);
+  const duplicate = anchors.find((anchor, i) => anchors.indexOf(anchor) !== i);
+  if (duplicate) {
+    throw new Error(`Duplicate focus-area anchor: ${duplicate}`);
+  }
+  return anchored;
+}
+
+// The right column holds either a numbered overview of the section's focus
+// areas (areas, whose cards follow the intro) or a section-specific visual
+// (aside). An aside gets equal columns and top alignment, since it may change
+// height (e.g. an expandable table).
 export function ServiceSection({
   id,
   step,
@@ -13,7 +32,7 @@ export function ServiceSection({
   introDetail,
   aside,
   band,
-  withImage = false,
+  areas,
   children,
 }: {
   id: string;
@@ -23,10 +42,11 @@ export function ServiceSection({
   introDetail?: React.ReactNode;
   aside?: React.ReactNode;
   band: string;
-  withImage?: boolean;
+  areas?: FocusArea[];
   children?: React.ReactNode;
 }) {
-  const leftSpan = aside ? "lg:col-span-6" : withImage ? "lg:col-span-7" : "lg:col-span-9";
+  const anchoredAreas = areas && withAnchors(id, areas);
+  const leftSpan = aside ? "lg:col-span-6" : anchoredAreas ? "lg:col-span-7" : "lg:col-span-9";
 
   return (
     <section
@@ -56,15 +76,13 @@ export function ServiceSection({
             {introDetail}
           </div>
           {aside && <div className="lg:col-span-6">{aside}</div>}
-          {!aside && withImage && (
+          {!aside && anchoredAreas && (
             <div className="lg:col-span-5">
-              <ArticleImagePlaceholder
-                label={`Image placeholder for ${name}`}
-                className="aspect-[4/3]"
-              />
+              <FocusAreaOverview name={name} areas={anchoredAreas} />
             </div>
           )}
         </div>
+        {anchoredAreas && <FocusAreas areas={anchoredAreas} />}
         {children}
       </div>
     </section>
@@ -96,16 +114,21 @@ function Bullets({ items }: { items: readonly React.ReactNode[] }) {
 // list's label is an h4 under a titled card, or an h3 when the card has no
 // title of its own and the list applies to the whole service.
 export function FocusCard({
+  id,
   children,
   brings,
   bringsHeadingLevel = "h4",
 }: {
+  id?: string;
   children: React.ReactNode;
   brings?: readonly React.ReactNode[];
   bringsHeadingLevel?: "h3" | "h4";
 }) {
   return (
-    <div className="bg-surface-container-low rounded-xl p-6 sm:p-8 border border-outline-variant/40 flex flex-col gap-4">
+    <div
+      id={id}
+      className="bg-surface-container-low rounded-xl p-6 sm:p-8 border border-outline-variant/40 flex flex-col gap-4 scroll-mt-28"
+    >
       {children}
       {brings && (
         <div className="flex flex-col gap-3 pt-4 mt-auto border-t border-outline-variant/40">
@@ -117,11 +140,29 @@ export function FocusCard({
   );
 }
 
-export function FocusAreas({ areas }: { areas: FocusArea[] }) {
+// Shows up front how many focus areas the section has, since the cards
+// themselves start below the fold. Styled like the hero's numbered service
+// rows; each row jumps to its card. The nav is named after the service so
+// screen readers can tell the sections' overviews apart.
+function FocusAreaOverview({ name, areas }: { name: string; areas: AnchoredArea[] }) {
+  return (
+    <nav aria-label={`What’s included in ${name}`} className="flex flex-col gap-3">
+      <DotLabel>What&rsquo;s included</DotLabel>
+      <NumberedLinkList
+        items={areas.map((area) => ({
+          href: `#${area.anchor}`,
+          content: <LinkName>{area.title}</LinkName>,
+        }))}
+      />
+    </nav>
+  );
+}
+
+function FocusAreas({ areas }: { areas: AnchoredArea[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {areas.map((area) => (
-        <FocusCard key={area.title} brings={area.brings}>
+        <FocusCard key={area.title} id={area.anchor} brings={area.brings}>
           <h3 className="font-display text-xl text-on-surface font-bold">{area.title}</h3>
           {area.body.map((paragraph) => (
             <p key={paragraph} className="font-body text-base leading-relaxed text-on-surface-variant">

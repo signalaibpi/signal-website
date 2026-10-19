@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/services/Hero";
 import { DimensionsTable } from "@/components/services/DimensionsTable";
-import { Deliverables, FocusAreas, FocusCard, ServiceSection } from "@/components/services/ServiceSection";
+import { Deliverables, FocusCard, ServiceSection } from "@/components/services/ServiceSection";
 import {
   DELIVERY_AREAS,
   DELIVERY_OUTCOMES,
@@ -85,10 +85,9 @@ export default function ServicesPage() {
         step="Step 02"
         name="AI Planning"
         band="bg-surface-container-lowest"
-        withImage
+        areas={PLANNING_AREAS}
         intro="Helps teams translate agreed priorities into practical plans with clear targets, ownership and resources."
       >
-        <FocusAreas areas={PLANNING_AREAS} />
         <Deliverables heading="AI Planning deliverables" items={PLANNING_DELIVERABLES} />
       </ServiceSection>
 
@@ -97,10 +96,9 @@ export default function ServicesPage() {
         step="Step 03"
         name="AI Delivery"
         band="bg-surface"
-        withImage
+        areas={DELIVERY_AREAS}
         intro="Over a three-month engagement, Signal’s Embedded AI Product Managers help teams deliver the plan while building their ability to continue independently."
       >
-        <FocusAreas areas={DELIVERY_AREAS} />
         <Deliverables heading="AI Delivery outcomes" items={DELIVERY_OUTCOMES} />
       </ServiceSection>
 
