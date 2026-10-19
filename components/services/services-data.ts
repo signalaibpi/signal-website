@@ -130,7 +130,7 @@ export const PLANNING_DELIVERABLES = [
   "Prioritised list of AI use cases to enhance or implement",
   "Agreed changes to product development processes, roles and responsibilities",
   "Agreed changes to operational workflows",
-  "Agreed changes to AI policies and quality processes, roles and responsibilities",
+  "Agreed changes to quality processes, roles and responsibilities",
   "Agreed implementation plan and funding requirements",
 ];
 
