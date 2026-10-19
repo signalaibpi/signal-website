@@ -91,7 +91,7 @@ export const PLANNING_AREAS: FocusArea[] = [
     ],
   },
   {
-    title: "Priority use cases and product ownership",
+    title: "Priority use cases",
     body: [
       "Signal works closely with teams to identify priority use cases. It also assists in identifying product development process bottlenecks and finding solutions to resolve them.",
     ],
@@ -128,7 +128,7 @@ export const PLANNING_DELIVERABLES = [
   "Agreed 1-year operating targets",
   "Agreed 3-month execution targets",
   "Prioritised list of AI use cases to enhance or implement",
-  "Agreed changes to product development processes, roles and responsibilities",
+  "Agreed use case delivery timelines, roles and responsibilities",
   "Agreed changes to operational workflows",
   "Agreed changes to quality processes, roles and responsibilities",
   "Agreed implementation plan and funding requirements",
